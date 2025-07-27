@@ -1,81 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Musa Mwange | Cybersecurity Portfolio</title>
-  <link rel="stylesheet" href="css/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musa Mwange | Cybersecurity Portfolio</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
 </head>
 <body>
-  <header>
-    <h1>Musa Muthami Mwange</h1>
-    <p>Cybersecurity Enthusiast | BSc. IT Student | KCA University</p>
-  </header>
-
-  <nav>
-    <a href="#certifications">Certifications</a>
-    <a href="#projects">Projects</a>
-    <a href="#labs">Labs</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <main>
-    <section id="about">
-      <h2>About Me</h2>
-      <p>
-        I’m an aspiring cybersecurity professional with a strong interest in ethical hacking,
-        digital forensics, and system defense. Currently pursuing BSc. IT at KCA University, Kenya.
-        Passionate about security, open-source, and helping secure the digital world.
-      </p>
-    </section>
-
-    <section id="certifications">
-      <h2>Certifications</h2>
-      <ul>
-        <li>✔ Introduction to Cybersecurity - Cisco</li>
-        <li>✔ Google Cybersecurity Certificate - Coursera</li>
-        <li>✔ TryHackMe Junior Penetration Tester Path (in progress)</li>
-        <li>✔ GitHub Student Pack Member</li>
-      </ul>
-    </section>
-
-    <section id="projects">
-      <h2>Projects</h2>
-      <ul>
-        <li>
-          <strong>🔐 Vulnerability Scanner Script</strong><br />
-          Wrote a Python tool to scan for open ports and vulnerabilities using Nmap and custom rules.
-        </li>
-        <li>
-          <strong>📄 Password Manager App</strong><br />
-          Built a secure password manager using Python and Flask with AES encryption.
-        </li>
-      </ul>
-    </section>
-
-    <section id="labs">
-      <h2>Labs & Practice</h2>
-      <p>
-        Practicing on platforms like:
-        <ul>
-          <li>🛡 TryHackMe: <em>https://tryhackme.com/p/musamuthami</em></li>
-          <li>🐱 Hack The Box: <em>https://app.hackthebox.com/profile/YOUR_ID</em></li>
-          <li>💡 CyberDefenders, PicoCTF, PortSwigger</li>
+    <!-- Navigation -->
+    <nav class="glass-nav">
+        <div class="logo-pill">
+            <span>Musa Mwange</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact" class="nav-button">Contact</a></li>
         </ul>
-      </p>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="bg-circles">
+            <img src="images/circles-bg.svg" alt="Background circles">
+        </div>
+        <div class="hero-content">
+            <div class="tags">
+                <span>COLLABORATIVE</span>
+                <span>•</span>
+                <span>EMPATHETIC</span>
+                <span>•</span>
+                <span>INNOVATIVE</span>
+            </div>
+            <h1>Beyond The Interface</h1>
+            <p class="subtitle">Crafting secure digital experiences as a Frontend Developer and Cybersecurity Specialist</p>
+            <div class="cta-buttons">
+                <a href="#projects" class="btn-primary">My Work</a>
+                <a href="#about" class="btn-secondary">About Me</a>
+            </div>
+        </div>
     </section>
 
-    <section id="contact">
-      <h2>Contact Me</h2>
-      <p>Email: <a href="mailto:musamwange2@gmail.com">musamwange2@gmail.com</a></p>
-      <p>Phone: 0114945843</p>
-      <p>GitHub: <a href="https://github.com/MusaMwange" target="_blank">MusaMwange</a></p>
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="about-content">
+            <h2>About Me</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>Hi there! I'm Musa Mwange, a passionate Frontend Developer and Cybersecurity Enthusiast currently pursuing a BSc in Information Technology at KCA University. I love creating sleek, secure, and impactful digital experiences that prioritize both aesthetics and robust security.</p>
+                    <p>My approach blends clean design with security best practices to deliver solutions that are beautiful, functional, and protected against modern threats.</p>
+                </div>
+                <div class="profile-image">
+                    <img src="images/profile.jpg" alt="Musa Mwange">
+                </div>
+            </div>
+        </div>
     </section>
-  </main>
 
-  <footer>
-    <p>© 2025 Musa Mwange — Built with 💻 for cybersecurity</p>
-  </footer>
-<script src="js/main.js"></script>
+    <!-- Other sections would go here -->
+
+    <script src="js/main.js"></script>
 </body>
 </html>
