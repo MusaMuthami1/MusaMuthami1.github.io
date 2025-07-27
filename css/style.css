@@ -224,3 +224,38 @@ h1 {
 .contact-info i {
   margin-right: 10px;
 }
+/* ===== Password Manager Styles ===== */
+.project#securevault {
+    border-left: 4px solid #64ffda;
+    animation: fadeIn 1s ease-out;
+}
+
+.status-badge {
+    background: rgba(100, 255, 218, 0.1);
+    color: #64ffda;
+    padding: 0.2rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.project-impact {
+    font-weight: 500;
+    color: #ccd6f6;
+    margin: 1rem 0;
+}
+
+/* ===== Skills Columns ===== */
+.skills-column {
+    display: inline-block;
+    vertical-align: top;
+    width: 48%;
+    margin-right: 2%;
+}
+
+@media (max-width: 768px) {
+    .skills-column {
+        width: 100%;
+        margin-right: 0;
+    }
+}
