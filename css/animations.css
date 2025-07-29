@@ -1,0 +1,77 @@
+/* Animation definitions for data-animate elements */
+[data-animate] {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+}
+
+[data-animate].animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Fade in animation */
+[data-animate="fade-in"] {
+    opacity: 0;
+    transition: opacity 0.6s ease-out;
+}
+
+[data-animate="fade-in"].animate {
+    opacity: 1;
+}
+
+/* Slide up animation */
+[data-animate="slide-up"] {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease-out;
+}
+
+[data-animate="slide-up"].animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Slide in from left */
+[data-animate="slide-left"] {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 0.6s ease-out;
+}
+
+[data-animate="slide-left"].animate {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Slide in from right */
+[data-animate="slide-right"] {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 0.6s ease-out;
+}
+
+[data-animate="slide-right"].animate {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Staggered animation delays for multiple elements */
+[data-animate].animate:nth-child(1) { transition-delay: 0.1s; }
+[data-animate].animate:nth-child(2) { transition-delay: 0.2s; }
+[data-animate].animate:nth-child(3) { transition-delay: 0.3s; }
+[data-animate].animate:nth-child(4) { transition-delay: 0.4s; }
+[data-animate].animate:nth-child(5) { transition-delay: 0.5s; }
+[data-animate].animate:nth-child(6) { transition-delay: 0.6s; }
+
+/* Scale animation */
+[data-animate="scale"] {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: all 0.6s ease-out;
+}
+
+[data-animate="scale"].animate {
+    opacity: 1;
+    transform: scale(1);
+}

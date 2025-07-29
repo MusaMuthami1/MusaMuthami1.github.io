@@ -224,6 +224,176 @@ h1 {
 .contact-info i {
   margin-right: 10px;
 }
+
+/* Projects Section */
+.projects-section {
+    padding: 100px 20px;
+    background: white;
+}
+
+.projects-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.projects-content h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-gray);
+    margin-bottom: 50px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.project-card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid var(--black);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.project-card h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tech-pill {
+    background: var(--light-bg);
+    color: var(--black);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: 1px solid var(--black);
+    transition: all 0.3s ease;
+}
+
+.tech-pill:hover {
+    background: var(--primary-blue);
+    color: white;
+}
+
+/* Skills Section */
+.skills-section {
+    padding: 100px 20px;
+    background: var(--light-bg);
+}
+
+.skills-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.skills-content h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.skill-category {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid var(--black);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.skill-category h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: var(--primary-blue);
+}
+
+.skills-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.skill-item {
+    background: var(--light-bg);
+    color: var(--black);
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: 500;
+    border: 1px solid var(--black);
+    transition: all 0.3s ease;
+}
+
+.skill-item:hover {
+    background: var(--primary-blue);
+    color: white;
+    transform: translateX(5px);
+}
+
+/* Contact Section Updates */
+.contact-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-content h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.contact-item {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.contact-item strong {
+    display: inline-block;
+    width: 100px;
+    text-align: left;
+}
+
 /* ===== Password Manager Styles ===== */
 .project#securevault {
     border-left: 4px solid #64ffda;
@@ -257,5 +427,19 @@ h1 {
     .skills-column {
         width: 100%;
         margin-right: 0;
+    }
+    
+    .projects-grid,
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .skill-category h3 {
+        font-size: 1.2rem;
+    }
+    
+    .contact-item strong {
+        display: block;
+        margin-bottom: 5px;
     }
 }
