@@ -1,0 +1,70 @@
+/* Smooth transitions and animations */
+
+/* Fade in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animate elements on scroll */
+[data-animate] {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+}
+
+[data-animate].animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Button hover animations */
+.btn-primary:hover,
+.btn-secondary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 163, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:active,
+.btn-secondary:active {
+    transform: translateY(-1px);
+}
+
+/* Navigation hover effects */
+.nav-links a {
+    transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+    transition: width 0.3s ease;
+}
+
+/* About section animations */
+.about-content h2 {
+    animation: fadeIn 0.8s ease-out;
+}
+
+.about-text {
+    animation: fadeIn 0.8s ease-out 0.2s both;
+}
+
+.profile-image {
+    animation: fadeIn 0.8s ease-out 0.4s both;
+}
+
+/* Profile image hover effect */
+.profile-image img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-image img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
