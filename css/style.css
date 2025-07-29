@@ -203,26 +203,172 @@ h1 {
     .profile-image {
         order: -1;
     }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-info {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+    
+    .contact-item {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+    }
+    
+    .projects-content h2,
+    .contact-content h2 {
+        font-size: 2rem;
+    }
 }
+/* Projects Section */
+.projects-section {
+    padding: 100px 20px;
+    background: var(--light-bg);
+}
+
+.projects-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.projects-content h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.project-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    border: 1px solid var(--black);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.project-info h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--black);
+}
+
+.project-info p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: var(--text-gray);
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tech-tag {
+    background: var(--light-bg);
+    color: var(--black);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: 1px solid var(--black);
+}
+
+.project-link {
+    color: var(--primary-blue);
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.3s ease;
+}
+
+.project-link:hover {
+    color: var(--black);
+}
+
 /* Contact Section */
 .contact-section {
-  padding: 80px 20px;
-  background: #f8f9fa;
-  text-align: center;
+    padding: 100px 20px;
+    background: white;
 }
+
+.contact-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-content h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.contact-content p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: var(--text-gray);
+}
+
 .contact-info {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
 }
-.contact-info a {
-  color: #00A3FF;
-  text-decoration: none;
-  font-size: 1.1rem;
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 25px;
+    border: 1px solid var(--black);
+    border-radius: 50px;
+    background: var(--light-bg);
+    transition: transform 0.3s ease, background 0.3s ease;
 }
-.contact-info i {
-  margin-right: 10px;
+
+.contact-item:hover {
+    transform: translateY(-3px);
+    background: var(--primary-blue);
+}
+
+.contact-item:hover a {
+    color: white;
+}
+
+.contact-item a {
+    color: var(--black);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.contact-icon {
+    font-size: 1.2rem;
 }
 /* ===== Password Manager Styles ===== */
 .project#securevault {
