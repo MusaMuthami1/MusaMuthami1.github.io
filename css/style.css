@@ -259,3 +259,60 @@ h1 {
         margin-right: 0;
     }
 }
+/* Section Header */
+.section-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.section-header h2 {
+  font-size: 2.2rem;
+  margin-bottom: 0.7rem;
+  font-weight: 700;
+}
+.section-header p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+/* Skills Section */
+.skills-section {
+  padding: 3rem 0;
+  background: #f6f8fc;
+}
+.skills-columns {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+.skills-column {
+  background: #fff;
+  border-radius: 1.2rem;
+  box-shadow: 0 0.5rem 2rem rgba(0,0,0,0.03);
+  padding: 2rem 2.2rem;
+  min-width: 220px;
+  max-width: 300px;
+}
+.skills-column h3 {
+  font-size: 1.3rem;
+  color: #0a192f;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+.skills-column ul {
+  list-style: disc inside;
+  color: #222;
+  font-size: 1.05rem;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .skills-columns {
+    flex-direction: column;
+    align-items: center;
+  }
+  .skills-column {
+    width: 90%;
+    margin-bottom: 1.5rem;
+  }
+}
