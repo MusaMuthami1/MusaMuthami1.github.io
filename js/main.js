@@ -35,7 +35,67 @@ buttons.forEach(button => {
     button.addEventListener('mouseleave', () => {
         button.style.transform = 'translateY(0)';
     });
-});// Password Manager Project Interactions
+});
+
+// Contact Form Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.getElementById('contactForm');
+    const formStatus = document.getElementById('formStatus');
+
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(contactForm);
+            const messageData = {
+                name: formData.get('name'),
+                email: formData.get('email'),
+                message: formData.get('message'),
+                timestamp: new Date().toISOString()
+            };
+
+            // Store message locally
+            try {
+                let storedMessages = JSON.parse(localStorage.getItem('contactMessages') || '[]');
+                storedMessages.push(messageData);
+                localStorage.setItem('contactMessages', JSON.stringify(storedMessages));
+
+                // Show success message
+                showFormStatus('success', 'Thank you! Your message has been received. I\'ll get back to you soon!');
+                
+                // Reset form
+                contactForm.reset();
+
+                // Optional: Create mailto link as fallback
+                const mailtoLink = `mailto:musamwange2@gmail.com?subject=Contact from ${messageData.name}&body=From: ${messageData.name} (${messageData.email})%0A%0A${messageData.message}`;
+                
+                // Auto-open email client after a short delay
+                setTimeout(() => {
+                    if (confirm('Would you like to also send this message via your email client?')) {
+                        window.location.href = mailtoLink;
+                    }
+                }, 2000);
+
+            } catch (error) {
+                console.error('Error storing message:', error);
+                showFormStatus('error', 'There was an error saving your message. Please try again or contact me directly.');
+            }
+        });
+    }
+
+    function showFormStatus(type, message) {
+        formStatus.className = `form-status ${type}`;
+        formStatus.textContent = message;
+        formStatus.style.display = 'block';
+        
+        // Hide status after 5 seconds
+        setTimeout(() => {
+            formStatus.style.display = 'none';
+        }, 5000);
+    }
+});
+
+// Password Manager Project Interactions
 document.querySelectorAll('.tech-pill').forEach(pill => {
     pill.addEventListener('mouseenter', function() {
         this.style.transform = 'translateY(-3px)';
