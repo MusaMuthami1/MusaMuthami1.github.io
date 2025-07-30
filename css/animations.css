@@ -1,0 +1,108 @@
+/* Animation Styles */
+
+/* Fade in animation for elements with data-animate */
+[data-animate] {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+[data-animate].animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Contact item animations */
+.contact-item {
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Form field focus animations */
+.form-group input:focus,
+.form-group textarea:focus {
+    animation: focusGlow 0.3s ease-out;
+}
+
+@keyframes focusGlow {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 163, 255, 0.3);
+    }
+    100% {
+        box-shadow: 0 0 0 3px rgba(0, 163, 255, 0.1);
+    }
+}
+
+/* Hover animations for contact items */
+.contact-item:hover {
+    animation: hoverLift 0.3s ease-out forwards;
+}
+
+@keyframes hoverLift {
+    to {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 30px rgba(0, 163, 255, 0.1);
+    }
+}
+
+/* Button animation */
+.contact-submit {
+    transition: all 0.3s ease;
+}
+
+.contact-submit:hover {
+    animation: buttonHover 0.3s ease-out forwards;
+}
+
+@keyframes buttonHover {
+    to {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0, 163, 255, 0.3);
+    }
+}
+
+/* Staggered animation for contact info items */
+.contact-info .contact-item:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.contact-info .contact-item:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.contact-info .contact-item:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.contact-info .contact-item:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+/* Form container animation */
+.contact-form-container {
+    animation: fadeInUp 0.6s ease-out 0.3s forwards;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+/* Pulse animation for WhatsApp icon */
+.contact-icon .fa-whatsapp {
+    animation: whatsappPulse 2s infinite;
+}
+
+@keyframes whatsappPulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}

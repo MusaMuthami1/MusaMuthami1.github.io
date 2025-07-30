@@ -393,13 +393,16 @@ h1 {
     grid-template-columns: 1fr 1fr;
     gap: 50px;
     margin-top: 50px;
-    text-align: left;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
 }
 
 .contact-info {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
 }
 
 .contact-item {
@@ -411,18 +414,27 @@ h1 {
     display: flex;
     align-items: center;
     gap: 20px;
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+.contact-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 163, 255, 0.1);
 }
 
 .contact-icon {
-    font-size: 2rem;
-    min-width: 60px;
+    font-size: 1.5rem;
+    min-width: 50px;
     text-align: center;
+    color: var(--primary-blue);
 }
 
 .contact-details h4 {
     margin: 0 0 8px 0;
     font-weight: 600;
     color: var(--black);
+    font-size: 1.1rem;
 }
 
 .contact-details a {
@@ -435,36 +447,88 @@ h1 {
     text-decoration: underline;
 }
 
-.contact-cta {
+/* Contact Form */
+.contact-form-container {
+    display: flex;
+    align-items: stretch;
+}
+
+.contact-form-card {
     background: rgba(255, 255, 255, 0.9);
     border-radius: 20px;
     padding: 40px;
     border: 1px solid var(--black);
     backdrop-filter: blur(10px);
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
+    text-align: left;
 }
 
-.contact-cta h3 {
+.contact-form-card h3 {
     font-size: 1.5rem;
     font-weight: 600;
     color: var(--black);
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
-.contact-cta p {
+.contact-form-card p {
     color: var(--text-gray);
     line-height: 1.6;
     margin-bottom: 30px;
 }
 
-.whatsapp-main {
-    display: inline-flex;
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: var(--black);
+    font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 12px 15px;
+    border: 1px solid var(--black);
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.8);
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 0 0 3px rgba(0, 163, 255, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.contact-submit {
+    align-self: flex-start;
+    display: flex;
     align-items: center;
     gap: 8px;
+    margin-top: 10px;
+}
+
+.contact-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 163, 255, 0.3);
 }
 
 /* Responsive Design */
@@ -528,30 +592,14 @@ h1 {
         gap: 15px;
     }
     
+    .contact-form-card {
+        padding: 30px 20px;
+    }
+    
     .cta-buttons {
         flex-direction: column;
         align-items: center;
     }
-}
-/* Contact Section */
-.contact-section {
-  padding: 80px 20px;
-  background: #f8f9fa;
-  text-align: center;
-}
-.contact-info {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  margin-top: 30px;
-}
-.contact-info a {
-  color: #00A3FF;
-  text-decoration: none;
-  font-size: 1.1rem;
-}
-.contact-info i {
-  margin-right: 10px;
 }
 /* ===== Password Manager Styles ===== */
 .project#securevault {
