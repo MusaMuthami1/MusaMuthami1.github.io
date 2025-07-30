@@ -47,39 +47,55 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault();
             
             const formData = new FormData(contactForm);
-            const messageData = {
-                name: formData.get('name'),
-                email: formData.get('email'),
-                message: formData.get('message'),
-                timestamp: new Date().toISOString()
-            };
+            const submitButton = contactForm.querySelector('button[type="submit"]');
+            
+            // Show loading state
+            const originalButtonText = submitButton.textContent;
+            submitButton.textContent = 'Sending...';
+            submitButton.disabled = true;
 
-            // Store message locally
-            try {
-                let storedMessages = JSON.parse(localStorage.getItem('contactMessages') || '[]');
-                storedMessages.push(messageData);
-                localStorage.setItem('contactMessages', JSON.stringify(storedMessages));
-
-                // Show success message
-                showFormStatus('success', 'Thank you! Your message has been received. I\'ll get back to you soon!');
-                
-                // Reset form
-                contactForm.reset();
-
-                // Optional: Create mailto link as fallback
-                const mailtoLink = `mailto:musamwange2@gmail.com?subject=Contact from ${messageData.name}&body=From: ${messageData.name} (${messageData.email})%0A%0A${messageData.message}`;
-                
-                // Auto-open email client after a short delay
-                setTimeout(() => {
-                    if (confirm('Would you like to also send this message via your email client?')) {
-                        window.location.href = mailtoLink;
+            // Submit to Formspree
+            fetch(contactForm.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    // Success - message sent via Formspree
+                    showFormStatus('success', 'Message sent! Thank you for reaching out. I\'ll get back to you soon!');
+                    contactForm.reset();
+                    
+                    // Store message locally as backup
+                    try {
+                        const messageData = {
+                            name: formData.get('name'),
+                            email: formData.get('email'),
+                            message: formData.get('message'),
+                            timestamp: new Date().toISOString(),
+                            sent: true
+                        };
+                        let storedMessages = JSON.parse(localStorage.getItem('contactMessages') || '[]');
+                        storedMessages.push(messageData);
+                        localStorage.setItem('contactMessages', JSON.stringify(storedMessages));
+                    } catch (storageError) {
+                        console.log('Note: Could not store message locally, but email was sent successfully.');
                     }
-                }, 2000);
-
-            } catch (error) {
-                console.error('Error storing message:', error);
-                showFormStatus('error', 'There was an error saving your message. Please try again or contact me directly.');
-            }
+                } else {
+                    throw new Error('Network response was not ok');
+                }
+            })
+            .catch(error => {
+                console.error('Error sending message:', error);
+                showFormStatus('error', 'There was an error sending your message. Please try again or contact me directly at musamwange2@gmail.com.');
+            })
+            .finally(() => {
+                // Reset button state
+                submitButton.textContent = originalButtonText;
+                submitButton.disabled = false;
+            });
         });
     }
 
@@ -88,10 +104,10 @@ document.addEventListener('DOMContentLoaded', function() {
         formStatus.textContent = message;
         formStatus.style.display = 'block';
         
-        // Hide status after 5 seconds
+        // Hide status after 7 seconds for better user experience
         setTimeout(() => {
             formStatus.style.display = 'none';
-        }, 5000);
+        }, 7000);
     }
 });
 
