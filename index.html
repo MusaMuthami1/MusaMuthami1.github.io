@@ -181,21 +181,20 @@
               <a href="https://github.com/MusaMuthami1" target="_blank">github.com/MusaMuthami1</a>
             </div>
           </div>
-          <div class="contact-item">
-            <div class="contact-icon">
-              <i class="fab fa-linkedin"></i>
-            </div>
-            <div class="contact-details">
-              <h4>LinkedIn</h4>
-              <a href="https://www.linkedin.com/in/musamuthami1/" target="_blank">Connect with me</a>
-            </div>
-          </div>
+
         </div>
         <div class="contact-form-container">
           <div class="contact-cta">
             <h3>Leave a Message</h3>
             <p>Have a project in mind or just want to say hello? Send me a message!</p>
-            <form class="contact-form" id="contactForm">
+            <!-- 
+            FORMSPREE CONFIGURATION:
+            1. Sign up at https://formspree.io/ 
+            2. Replace 'YOUR_FORMSPREE_ENDPOINT' below with your actual Formspree endpoint
+            3. Example: action="https://formspree.io/f/abcd1234"
+            4. Alternative: Use other email services like EmailJS, Netlify Forms, or getform.io
+            -->
+            <form class="contact-form" id="contactForm" action="https://formspree.io/f/YOUR_FORMSPREE_ENDPOINT" method="POST">
               <div class="form-group">
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" required>
@@ -208,6 +207,9 @@
                 <label for="message">Message</label>
                 <textarea id="message" name="message" rows="5" required></textarea>
               </div>
+              <!-- Hidden field for better spam protection -->
+              <input type="hidden" name="_subject" value="New contact form submission from portfolio">
+              <input type="hidden" name="_next" value="https://musamuthami1.github.io/#contact">
               <div class="form-group">
                 <button type="submit" class="btn-primary">Send Message</button>
               </div>
