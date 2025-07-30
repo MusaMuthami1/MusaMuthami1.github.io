@@ -87,11 +87,38 @@
     animation: slideInFromRight 0.8s ease-out;
 }
 
+/* Contact section specific animations */
+.contact-section .contact-item {
+    opacity: 0;
+    transform: translateX(-30px);
+    animation: slideInFromLeft 0.6s ease-out forwards;
+}
+
+.contact-section .contact-item:nth-child(1) { animation-delay: 0.1s; }
+.contact-section .contact-item:nth-child(2) { animation-delay: 0.2s; }
+.contact-section .contact-item:nth-child(3) { animation-delay: 0.3s; }
+.contact-section .contact-item:nth-child(4) { animation-delay: 0.4s; }
+
+.contact-form-container {
+    opacity: 0;
+    transform: translateX(30px);
+    animation: slideInFromRight 0.6s ease-out 0.2s forwards;
+}
+
 /* Button hover animations */
 .btn-primary:hover,
 .btn-secondary:hover,
 .whatsapp-btn:hover {
     animation: pulse 0.3s ease-in-out;
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    box-shadow: 0 5px 15px rgba(0, 163, 255, 0.3);
 }
 
 /* Form animations */
