@@ -35,7 +35,37 @@ buttons.forEach(button => {
     button.addEventListener('mouseleave', () => {
         button.style.transform = 'translateY(0)';
     });
-});// Password Manager Project Interactions
+});
+
+// Contact form functionality
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+    
+    // Simple validation
+    if (!name || !email || !message) {
+        alert('Please fill in all fields.');
+        return;
+    }
+    
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        alert('Please enter a valid email address.');
+        return;
+    }
+    
+    // Success message (in a real application, this would send the email)
+    alert('Thank you for your message! I will get back to you soon.');
+    
+    // Reset form
+    this.reset();
+});
+
+// Password Manager Project Interactions
 document.querySelectorAll('.tech-pill').forEach(pill => {
     pill.addEventListener('mouseenter', function() {
         this.style.transform = 'translateY(-3px)';
