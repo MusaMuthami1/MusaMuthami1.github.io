@@ -165,6 +165,27 @@ h1 {
     margin: 0 auto;
 }
 
+.about-content h2 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 2.8rem;
+    color: var(--black);
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+}
+
+.about-text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: var(--text-gray);
+}
+
+.about-text p {
+    margin-bottom: 0;
+}
+
 .about-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;

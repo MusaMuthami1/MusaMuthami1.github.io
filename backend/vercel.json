@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "name": "portfolio-contact-api",
+  "builds": [
+    {
+      "src": "server.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "server.js"
+    }
+  ],
+  "env": {
+    "SPARKPOST_API_KEY": "@sparkpost_api_key",
+    "SPARKPOST_DOMAIN": "@sparkpost_domain",
+    "RECIPIENT_EMAIL": "@recipient_email",
+    "SENDER_EMAIL": "@sender_email"
+  }
+}
