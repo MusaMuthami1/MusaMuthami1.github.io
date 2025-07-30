@@ -553,6 +553,106 @@ h1 {
 .contact-info i {
   margin-right: 10px;
 }
+
+/* WhatsApp icon styling */
+.contact-info a[href*="wa.me"] {
+  color: #25D366;
+}
+
+.contact-info a[href*="wa.me"]:hover {
+  color: #128C7E;
+}
+
+/* Contact Form Styles */
+.contact-form-section {
+  margin-top: 50px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-form-section h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: var(--black);
+}
+
+.contact-form {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  padding: 30px;
+  border: 1px solid var(--black);
+  backdrop-filter: blur(10px);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--black);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid var(--black);
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  background: var(--white);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 2px rgba(0, 163, 255, 0.2);
+}
+
+.contact-form .btn-primary {
+  width: 100%;
+  margin-top: 10px;
+  padding: 12px 24px;
+  background: var(--primary-blue);
+  color: var(--white);
+  border: none;
+  border-radius: 25px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-form .btn-primary:hover {
+  background: #0082CC;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 163, 255, 0.3);
+}
+
+/* Responsive improvements for contact form */
+@media (max-width: 768px) {
+  .contact-form-section {
+    margin-top: 30px;
+  }
+  
+  .contact-form {
+    padding: 20px;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    padding: 10px 12px;
+  }
+}
 /* ===== Password Manager Styles ===== */
 .project#securevault {
     border-left: 4px solid #64ffda;
