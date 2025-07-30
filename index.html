@@ -4,10 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Musa Mwange | Cybersecurity Portfolio</title>
+    
+    <!-- 
+    ====================================================================
+    EMAILJS CONFIGURATION GUIDE
+    ====================================================================
+    
+    This contact form is configured to use EmailJS for sending emails.
+    
+    Current Setup:
+    - Service ID: service_mh9yc99 (Gmail API integration)
+    - User ID: Placeholder - needs to be configured
+    - Template ID: Placeholder - needs to be configured
+    
+    To complete the EmailJS setup:
+    1. Go to https://www.emailjs.com/
+    2. Create an account or log in
+    3. Go to Email Services and connect your Gmail account
+    4. Note down your Service ID (should be: service_mh9yc99)
+    5. Go to Account > API Keys and copy your User ID
+    6. Go to Email Templates and create a new template
+    7. Update the JavaScript file (js/main.js) with your actual IDs:
+       - Replace 'YOUR_USER_ID' with your actual User ID
+       - Replace 'YOUR_TEMPLATE_ID' with your template ID
+    
+    Template Variables (use these in your EmailJS template):
+    - {{from_name}} - Sender's name
+    - {{from_email}} - Sender's email
+    - {{message}} - Message content
+    - {{to_name}} - Your name (Musa Mwange)
+    - {{reply_to}} - Sender's email for replies
+    
+    Fallback: If EmailJS is not configured, the form will use mailto links
+    ====================================================================
+    -->
+    
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animations.css">
+    
+    <!-- EmailJS Integration for Contact Form -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 <body>
     <!-- Navigation -->
@@ -181,15 +219,6 @@
               <a href="https://github.com/MusaMuthami1" target="_blank">github.com/MusaMuthami1</a>
             </div>
           </div>
-          <div class="contact-item">
-            <div class="contact-icon">
-              <i class="fab fa-linkedin"></i>
-            </div>
-            <div class="contact-details">
-              <h4>LinkedIn</h4>
-              <a href="https://www.linkedin.com/in/musamuthami1/" target="_blank">Connect with me</a>
-            </div>
-          </div>
         </div>
         <div class="contact-form-container">
           <div class="contact-cta">
@@ -198,15 +227,15 @@
             <form class="contact-form" id="contactForm">
               <div class="form-group">
                 <label for="name">Name</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" name="from_name" placeholder="Enter your full name" required>
               </div>
               <div class="form-group">
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="from_email" placeholder="your.email@example.com" required>
               </div>
               <div class="form-group">
                 <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
+                <textarea id="message" name="message" rows="5" placeholder="Tell me about your project or just say hello!" required></textarea>
               </div>
               <div class="form-group">
                 <button type="submit" class="btn-primary">Send Message</button>

@@ -404,6 +404,7 @@ h1 {
     gap: 20px;
 }
 
+/* Enhanced Contact Item Hover Animations */
 .contact-item {
     background: rgba(255, 255, 255, 0.9);
     border-radius: 15px;
@@ -413,12 +414,32 @@ h1 {
     display: flex;
     align-items: center;
     gap: 20px;
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.contact-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 163, 255, 0.1), transparent);
+    transition: left 0.6s ease;
 }
 
 .contact-item:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 163, 255, 0.2), 0 0 20px rgba(0, 163, 255, 0.1);
+    border-color: var(--primary-blue);
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.contact-item:hover::before {
+    left: 100%;
 }
 
 .contact-icon {
@@ -426,22 +447,55 @@ h1 {
     min-width: 50px;
     text-align: center;
     color: var(--primary-blue);
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover .contact-icon {
+    transform: scale(1.2) rotate(5deg);
+    filter: brightness(1.2);
 }
 
 .contact-icon .fa-whatsapp {
     color: #25D366;
 }
 
+.contact-item:hover .contact-icon .fa-whatsapp {
+    color: #128C7E;
+    text-shadow: 0 0 10px rgba(37, 211, 102, 0.5);
+}
+
 .contact-icon .fa-github {
     color: #333;
 }
 
-.contact-icon .fa-linkedin {
-    color: #0077B5;
+.contact-item:hover .contact-icon .fa-github {
+    color: #000;
+    text-shadow: 0 0 10px rgba(51, 51, 51, 0.5);
+}
+
+.contact-icon .fa-envelope {
+    color: var(--primary-blue);
+}
+
+.contact-item:hover .contact-icon .fa-envelope {
+    text-shadow: 0 0 10px rgba(0, 163, 255, 0.5);
+}
+
+.contact-icon .fa-phone {
+    color: var(--primary-blue);
+}
+
+.contact-item:hover .contact-icon .fa-phone {
+    text-shadow: 0 0 10px rgba(0, 163, 255, 0.5);
 }
 
 .contact-details {
     flex: 1;
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover .contact-details {
+    transform: translateX(5px);
 }
 
 .contact-details h4 {
@@ -449,6 +503,12 @@ h1 {
     font-weight: 600;
     color: var(--black);
     font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover .contact-details h4 {
+    color: var(--primary-blue);
+    transform: scale(1.05);
 }
 
 .contact-details a {
@@ -456,14 +516,36 @@ h1 {
     text-decoration: none;
     font-weight: 500;
     transition: all 0.3s ease;
+    position: relative;
+}
+
+.contact-details a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary-blue);
+    transition: width 0.3s ease;
+}
+
+.contact-item:hover .contact-details a::after {
+    width: 100%;
 }
 
 .contact-details a:hover {
-    text-decoration: underline;
+    text-decoration: none;
+    color: var(--primary-blue);
+    text-shadow: 0 0 5px rgba(0, 163, 255, 0.3);
 }
 
 .whatsapp-link {
     color: #25D366 !important;
+}
+
+.whatsapp-link::after {
+    background: #25D366 !important;
 }
 
 .contact-form-container {
@@ -518,12 +600,26 @@ h1 {
     background: rgba(255, 255, 255, 0.8);
 }
 
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #999;
+    font-style: italic;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus::placeholder,
+.form-group textarea:focus::placeholder {
+    color: #ccc;
+    transform: translateX(5px);
+}
+
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
     border-color: var(--primary-blue);
     background: white;
     box-shadow: 0 0 0 3px rgba(0, 163, 255, 0.1);
+    transform: scale(1.02);
 }
 
 .form-group textarea {
@@ -535,6 +631,38 @@ h1 {
     align-self: flex-start;
     min-width: 150px;
     margin-top: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.form-group button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 163, 255, 0.3);
+}
+
+.form-group button:active {
+    transform: translateY(0);
+}
+
+.form-group button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.form-group button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.6s ease;
+}
+
+.form-group button:hover::before {
+    left: 100%;
 }
 
 .form-status {
