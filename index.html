@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Musa Mwange | Cybersecurity Portfolio</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animations.css">
 </head>
@@ -142,10 +143,65 @@
         <h2>Contact</h2>
         <p>Let's connect and build something amazing!</p>
       </div>
-      <div class="contact-info">
-        <a href="mailto:musamuthami1@gmail.com"><i class="fas fa-envelope"></i> musamuthami1@gmail.com</a>
-        <a href="https://github.com/MusaMuthami1" target="_blank"><i class="fab fa-github"></i> github.com/MusaMuthami1</a>
-        <a href="https://www.linkedin.com/in/musamuthami1/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-envelope social-icon"></i>
+            </div>
+            <div class="contact-details">
+              <h4>Email</h4>
+              <a href="mailto:musamwange2@gmail.com">musamwange2@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fab fa-whatsapp social-icon" style="color: #25D366;"></i>
+            </div>
+            <div class="contact-details">
+              <h4>WhatsApp</h4>
+              <a href="https://wa.me/254114945842" target="_blank">0114945842</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fab fa-github social-icon"></i>
+            </div>
+            <div class="contact-details">
+              <h4>GitHub</h4>
+              <a href="https://github.com/MusaMuthami1" target="_blank">github.com/MusaMuthami1</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fab fa-linkedin social-icon" style="color: #0077B5;"></i>
+            </div>
+            <div class="contact-details">
+              <h4>LinkedIn</h4>
+              <a href="https://www.linkedin.com/in/musamuthami1/" target="_blank">LinkedIn Profile</a>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form-container">
+          <h3>Send me a message</h3>
+          <form class="contact-form" id="contactForm">
+            <div class="form-field">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <div class="form-field">
+              <button type="submit" class="btn-primary hover-bounce">Send Message</button>
+            </div>
+          </form>
+        </div>
       </div>
     </section>
 
