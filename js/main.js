@@ -35,7 +35,45 @@ buttons.forEach(button => {
     button.addEventListener('mouseleave', () => {
         button.style.transform = 'translateY(0)';
     });
-});// Password Manager Project Interactions
+});
+
+// Contact Form Handling
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+    
+    // Simple validation
+    if (!name || !email || !message) {
+        alert('Please fill in all fields.');
+        return;
+    }
+    
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        alert('Please enter a valid email address.');
+        return;
+    }
+    
+    // Create mailto link with form data
+    const subject = `Contact Form Message from ${name}`;
+    const body = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
+    const mailtoLink = `mailto:musamuthami1@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    
+    // Open email client
+    window.location.href = mailtoLink;
+    
+    // Show success message
+    alert('Thank you for your message! Your email client should open with the message ready to send.');
+    
+    // Reset form
+    this.reset();
+});
+
+// Password Manager Project Interactions
 document.querySelectorAll('.tech-pill').forEach(pill => {
     pill.addEventListener('mouseenter', function() {
         this.style.transform = 'translateY(-3px)';
