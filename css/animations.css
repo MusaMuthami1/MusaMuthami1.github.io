@@ -1,0 +1,338 @@
+/* Advanced Animation CSS File - Game Style */
+
+/* Smooth global transitions */
+* {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Fade in animation for sections */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Slide in from left with bounce */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-60px) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+/* Slide in from right with bounce */
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(60px) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+/* Scale in animation with elastic effect */
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.6) rotate(-5deg);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+/* Floating animation */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    33% {
+        transform: translateY(-15px) rotate(1deg);
+    }
+    66% {
+        transform: translateY(-8px) rotate(-1deg);
+    }
+}
+
+/* Glow pulse animation */
+@keyframes glowPulse {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(0, 163, 255, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(0, 163, 255, 0.6), 0 0 60px rgba(100, 255, 218, 0.3);
+    }
+}
+
+/* Rainbow text animation */
+@keyframes rainbow {
+    0% { color: #ff0000; }
+    16% { color: #ff8000; }
+    33% { color: #ffff00; }
+    50% { color: #00ff00; }
+    66% { color: #0080ff; }
+    83% { color: #8000ff; }
+    100% { color: #ff0000; }
+}
+
+/* Matrix-style background animation */
+@keyframes matrix {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+/* Apply animations to sections with data-animate attribute */
+[data-animate] {
+    animation: fadeIn 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Enhanced stagger animations for multiple elements */
+.skills-column:nth-child(1) {
+    animation: slideInLeft 1s cubic-bezier(0.4, 0, 0.2, 1) 0.2s both;
+}
+
+.skills-column:nth-child(2) {
+    animation: scaleIn 1s cubic-bezier(0.4, 0, 0.2, 1) 0.4s both;
+}
+
+.skills-column:nth-child(3) {
+    animation: slideInRight 1s cubic-bezier(0.4, 0, 0.2, 1) 0.6s both;
+}
+
+.project-card:nth-child(1) {
+    animation: scaleIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.1s both;
+}
+
+.project-card:nth-child(2) {
+    animation: scaleIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.3s both;
+}
+
+.project-card:nth-child(3) {
+    animation: scaleIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.5s both;
+}
+
+.contact-item:nth-child(1) {
+    animation: slideInLeft 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.1s both;
+}
+
+.contact-item:nth-child(2) {
+    animation: slideInLeft 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.2s both;
+}
+
+.contact-item:nth-child(3) {
+    animation: slideInLeft 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.3s both;
+}
+
+.contact-item:nth-child(4) {
+    animation: slideInLeft 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.4s both;
+}
+
+.contact-item:nth-child(5) {
+    animation: slideInLeft 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.5s both;
+}
+
+.message-form {
+    animation: slideInRight 1s cubic-bezier(0.4, 0, 0.2, 1) 0.3s both;
+}
+
+/* Game-style hover animations */
+.nav-links a {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+.nav-links a::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #00A3FF, #64ffda);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateX(-50%);
+}
+
+.nav-links a:hover::before {
+    width: 100%;
+}
+
+.nav-links a:hover {
+    transform: translateY(-2px);
+    color: #00A3FF;
+}
+
+.project-card {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 163, 255, 0.1), transparent);
+    transition: all 0.6s ease;
+}
+
+.project-card:hover::before {
+    left: 100%;
+}
+
+.project-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 50px rgba(0, 163, 255, 0.2);
+}
+
+.contact-item {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+.contact-item:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(0, 163, 255, 0.2);
+}
+
+/* Profile image floating animation */
+.profile-image img {
+    animation: float 6s ease-in-out infinite, glowPulse 4s ease-in-out infinite;
+}
+
+/* Form animations */
+.form-group input,
+.form-group textarea {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(0, 163, 255, 0.3);
+}
+
+.submit-btn {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.submit-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.6s ease;
+}
+
+.submit-btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.submit-btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 163, 255, 0.4);
+}
+
+/* Stats animation */
+.stat {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.stat:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 163, 255, 0.2);
+}
+
+/* Hero title enhanced animation */
+.hero h1 {
+    background: linear-gradient(45deg, #00A3FF, #64ffda, #00A3FF);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: matrix 3s ease-in-out infinite;
+}
+
+/* Navigation glass effect enhancement */
+.glass-nav {
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-nav:hover {
+    background: rgba(255, 255, 255, 0.95);
+    transform: translateX(-50%) translateY(-2px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Button pulse effect */
+.btn-primary, .btn-secondary {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary:hover, .btn-secondary:hover {
+    transform: translateY(-3px) scale(1.05);
+    animation: glowPulse 1s ease-in-out infinite;
+}
+
+/* Skills column enhancement */
+.skills-column {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.skills-column:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 15px 40px rgba(0, 163, 255, 0.15);
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Loading animation for the entire page */
+@keyframes pageLoad {
+    from {
+        opacity: 0;
+        transform: scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+body {
+    animation: pageLoad 0.8s ease-out;
+}

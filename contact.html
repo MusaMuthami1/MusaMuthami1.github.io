@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me | Musa Mwange</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact-page.css">
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="glass-nav">
+        <div class="logo-pill">
+            <a href="index.html">
+                <span>Musa Mwange</span>
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#projects">Projects</a></li>
+            <li><a href="index.html#skills">Skills</a></li>
+            <li><a href="contact.html" class="nav-button active">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contact Hero Section -->
+    <section class="contact-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Let's Work Together</h1>
+                <p class="hero-subtitle">Ready to bring your ideas to life? I'm here to help you build secure, innovative digital solutions.</p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <i class="fas fa-clock"></i>
+                        <span>24h Response</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Secure Communication</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-handshake"></i>
+                        <span>Professional Service</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Contact Section -->
+    <section class="main-contact">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Information -->
+                <div class="contact-info-section">
+                    <h2>Get In Touch</h2>
+                    <p class="section-description">
+                        I'm always excited to discuss new projects, creative ideas, or opportunities to be part of your vision. Choose the method that works best for you.
+                    </p>
+
+                    <!-- Contact Methods -->
+                    <div class="contact-methods">
+                        <div class="contact-method" data-method="email">
+                            <div class="method-icon email-gradient">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="method-info">
+                                <h3>Email</h3>
+                                <p>musamwange2@gmail.com</p>
+                                <span class="method-note">Best for detailed inquiries</span>
+                            </div>
+                            <div class="method-action">
+                                <button class="contact-btn primary-btn">
+                                    <i class="fas fa-paper-plane"></i>
+                                    Send Email
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="contact-method" data-method="phone">
+                            <div class="method-icon phone-gradient">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="method-info">
+                                <h3>Phone</h3>
+                                <p>+254 114 945 842</p>
+                                <span class="method-note">Available during business hours</span>
+                            </div>
+                            <div class="method-action">
+                                <button class="contact-btn secondary-btn">
+                                    <i class="fas fa-phone-alt"></i>
+                                    Call Now
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="contact-method" data-method="whatsapp">
+                            <div class="method-icon whatsapp-gradient">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="method-info">
+                                <h3>WhatsApp</h3>
+                                <p>+254 114 945 842</p>
+                                <span class="method-note">Quick responses guaranteed</span>
+                            </div>
+                            <div class="method-action">
+                                <button class="contact-btn whatsapp-btn">
+                                    <i class="fab fa-whatsapp"></i>
+                                    Chat Now
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="contact-method" data-method="linkedin">
+                            <div class="method-icon linkedin-gradient">
+                                <i class="fab fa-linkedin"></i>
+                            </div>
+                            <div class="method-info">
+                                <h3>LinkedIn</h3>
+                                <p>linkedin.com/in/musamwange</p>
+                                <span class="method-note">Professional networking</span>
+                            </div>
+                            <div class="method-action">
+                                <button class="contact-btn linkedin-btn">
+                                    <i class="fab fa-linkedin"></i>
+                                    Connect
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Availability Status -->
+                    <div class="availability-status">
+                        <div class="status-indicator">
+                            <div class="status-dot online"></div>
+                            <span>Currently available for new projects</span>
+                        </div>
+                        <div class="response-time">
+                            <i class="fas fa-clock"></i>
+                            <span>Usually responds within 2-4 hours</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-section">
+                    <div class="form-header">
+                        <h2>Send a Message</h2>
+                        <p>Tell me about your project and let's discuss how we can work together.</p>
+                    </div>
+
+                    <!-- Form Status Messages -->
+                    <div id="form-status" class="form-status"></div>
+
+                    <form id="contactForm" class="enhanced-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                                <div class="input-focus-line"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                                <div class="input-focus-line"></div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                            <div class="input-focus-line"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="company">Company (Optional)</label>
+                            <input type="text" id="company" name="company">
+                            <div class="input-focus-line"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="projectType">Project Type</label>
+                            <select id="projectType" name="projectType" required>
+                                <option value="">Select a project type</option>
+                                <option value="website">Website Development</option>
+                                <option value="webapp">Web Application</option>
+                                <option value="security">Cybersecurity Consultation</option>
+                                <option value="audit">Security Audit</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <div class="input-focus-line"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="budget">Budget Range</label>
+                            <select id="budget" name="budget">
+                                <option value="">Select budget range</option>
+                                <option value="under-5k">Under $5,000</option>
+                                <option value="5k-10k">$5,000 - $10,000</option>
+                                <option value="10k-25k">$10,000 - $25,000</option>
+                                <option value="25k-plus">$25,000+</option>
+                                <option value="discuss">Let's discuss</option>
+                            </select>
+                            <div class="input-focus-line"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="timeline">Timeline</label>
+                            <select id="timeline" name="timeline">
+                                <option value="">Select timeline</option>
+                                <option value="asap">ASAP</option>
+                                <option value="1-month">Within 1 month</option>
+                                <option value="2-3-months">2-3 months</option>
+                                <option value="flexible">Flexible</option>
+                            </select>
+                            <div class="input-focus-line"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Project Details</label>
+                            <textarea id="message" name="message" rows="6" placeholder="Tell me about your project, goals, and any specific requirements..." required></textarea>
+                            <div class="input-focus-line"></div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="submit-button" id="submitBtn">
+                                <span class="btn-content">
+                                    <i class="fas fa-paper-plane"></i>
+                                    Send Message
+                                </span>
+                                <span class="btn-loading hidden">
+                                    <i class="fas fa-spinner fa-spin"></i>
+                                    Sending...
+                                </span>
+                            </button>
+                            <p class="form-note">
+                                <i class="fas fa-shield-alt"></i>
+                                Your information is secure and will never be shared.
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>How quickly do you respond?</h3>
+                    <p>I typically respond to all inquiries within 2-4 hours during business days, and within 24 hours on weekends.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What's your typical project timeline?</h3>
+                    <p>Project timelines vary based on complexity. Simple websites take 2-4 weeks, while complex applications can take 2-4 months.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do you work with remote teams?</h3>
+                    <p>Absolutely! I work with clients and teams globally. I'm experienced in remote collaboration and project management.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What's included in your security services?</h3>
+                    <p>Security audits, penetration testing, secure code review, compliance consultation, and ongoing security monitoring.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="contact-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Musa Mwange</h3>
+                    <p>Frontend Developer & Cybersecurity Specialist</p>
+                    <div class="social-links">
+                        <a href="https://github.com/MusaMuthami1" target="_blank" rel="noopener noreferrer" title="Visit my GitHub profile"><i class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com/in/musamwange" target="_blank" rel="noopener noreferrer" title="Connect with me on LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="mailto:musamwange2@gmail.com" title="Send me an email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Back to Portfolio</a>
+                    <a href="#top">Back to Top</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/contact-page.js"></script>
+</body>
+</html>

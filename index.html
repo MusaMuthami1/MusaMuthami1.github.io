@@ -1,12 +1,45 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Musa Mwange | Cybersecurity Portfolio</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs                                        <input type="text" id="subject" name="subject" placeholder="Project collaboration, job opportunity, startup idea, or just saying hi! 🎉" required>font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/animations.css">
+    <style>
+        /* Force circular profile images with absolute priority */
+        .profile-image, 
+        .about-profile-image img,
+        img[src*="profile"] {
+            -webkit-border-radius: 50% !important;
+            -moz-border-radius: 50% !important;
+            border-radius: 50% !important;
+            clip-path: circle(50%) !important;
+            overflow: hidden !important;
+        }
+        
+        .profile-image img {
+            -webkit-border-radius: 50% !important;
+            -moz-border-radius: 50% !important;
+            border-radius: 50% !important;
+            clip-path: circle(50%) !important;
+            width: 280px !important;
+            height: 280px !important;
+            object-fit: cover !important;
+        }
+        
+        /* Honeypot spam protection */
+        .honeypot {
+            display: none !important;
+        }
+        
+        /* Rate limit info styling */
+        .rate-limit-info {
+            display: none !important;
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -43,112 +76,740 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about-section">
-        <div class="about-content">
-            <h2>About Me</h2>
-            <div class="about-grid">
-                <div class="about-text">
-                    <p>Hello! I'm Musa Muthami Mwange, a frontend developer and cybersecurity enthusiast. I am currently pursuing a BSc in Information Technology. I love creating sleek, secure, and impactful digital experiences that prioritize both aesthetics and robust security.</p>
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-profile-section">
+                    <div class="about-profile-image">
+                        <img src="images/profile.JPG" alt="Musa Mwange">
+                    </div>
                 </div>
-                <div class="profile-image">
-                    <img src="images/profile.JPG" alt="Musa Mwange">
+                <div class="about-text-content">
+                    <div class="glass-background">
+                        <h2>About Me</h2>
+                        <p>As a passionate Cybersecurity Specialist and Frontend Developer, I bridge the gap between secure technology and exceptional user experiences. With expertise in threat analysis, vulnerability assessment, and modern web development, I create digital solutions that prioritize both security and usability.</p>
+                        
+                        <p>My journey in technology is driven by a commitment to protecting digital assets while delivering intuitive, responsive interfaces. I specialize in implementing security best practices throughout the development lifecycle, ensuring that every project meets the highest standards of both functionality and protection.</p>
+                        
+                        <div class="stats">
+                            <div class="stat">
+                                <h3>60+</h3>
+                                <p>Technical Skills</p>
+                            </div>
+                            <div class="stat">
+                                <h3>2+</h3>
+                                <p>Years Experience</p>
+                            </div>
+                            <div class="stat">
+                                <h3>15+</h3>
+                                <p>Projects Completed</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="skills-section" data-animate>
-      <div class="section-header">
-        <h2>Skills</h2>
-        <p>Technologies & Tools I Use</p>
-      </div>
-      <div class="skills-columns">
-        <div class="skills-column">
-          <h3>Frontend</h3>
-          <ul>
-            <li>HTML5</li>
-            <li>CSS3 / SASS</li>
-            <li>JavaScript (ES6+)</li>
-            <li>React.js</li>
-            <li>Bootstrap</li>
-          </ul>
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-content">
+                <h2>Technical Expertise</h2>
+                <p>A comprehensive toolkit spanning cybersecurity, web development, and emerging technologies</p>
+                
+                <div class="skills-grid">
+                    <!-- Cybersecurity -->
+                    <div class="skill-category">
+                        <div class="category-header">
+                            <i class="fas fa-shield-alt"></i>
+                            <h3>Cybersecurity</h3>
+                        </div>
+                        <div class="skills-list">
+                            <span class="skill-item">Penetration Testing</span>
+                            <span class="skill-item">Vulnerability Assessment</span>
+                            <span class="skill-item">Network Security</span>
+                            <span class="skill-item">Incident Response</span>
+                            <span class="skill-item">SIEM Tools</span>
+                            <span class="skill-item">Risk Management</span>
+                            <span class="skill-item">Compliance (ISO 27001)</span>
+                            <span class="skill-item">Digital Forensics</span>
+                            <span class="skill-item">Threat Intelligence</span>
+                            <span class="skill-item">Security Auditing</span>
+                        </div>
+                    </div>
+
+                    <!-- Frontend Development -->
+                    <div class="skill-category">
+                        <div class="category-header">
+                            <i class="fas fa-code"></i>
+                            <h3>Frontend Development</h3>
+                        </div>
+                        <div class="skills-list">
+                            <span class="skill-item">HTML5 & CSS3</span>
+                            <span class="skill-item">JavaScript (ES6+)</span>
+                            <span class="skill-item">React.js</span>
+                            <span class="skill-item">Vue.js</span>
+                            <span class="skill-item">TypeScript</span>
+                            <span class="skill-item">Responsive Design</span>
+                            <span class="skill-item">SASS/SCSS</span>
+                            <span class="skill-item">Bootstrap</span>
+                            <span class="skill-item">Tailwind CSS</span>
+                            <span class="skill-item">Progressive Web Apps</span>
+                        </div>
+                    </div>
+
+                    <!-- Programming Languages -->
+                    <div class="skill-category">
+                        <div class="category-header">
+                            <i class="fas fa-terminal"></i>
+                            <h3>Programming Languages</h3>
+                        </div>
+                        <div class="skills-list">
+                            <span class="skill-item">Python</span>
+                            <span class="skill-item">JavaScript</span>
+                            <span class="skill-item">Java</span>
+                            <span class="skill-item">C++</span>
+                            <span class="skill-item">PHP</span>
+                            <span class="skill-item">SQL</span>
+                            <span class="skill-item">PowerShell</span>
+                            <span class="skill-item">Bash Scripting</span>
+                            <span class="skill-item">Go</span>
+                            <span class="skill-item">Rust</span>
+                        </div>
+                    </div>
+
+                    <!-- Security Tools -->
+                    <div class="skill-category">
+                        <div class="category-header">
+                            <i class="fas fa-tools"></i>
+                            <h3>Security Tools</h3>
+                        </div>
+                        <div class="skills-list">
+                            <span class="skill-item">Metasploit</span>
+                            <span class="skill-item">Nmap</span>
+                            <span class="skill-item">Wireshark</span>
+                            <span class="skill-item">Burp Suite</span>
+                            <span class="skill-item">OWASP ZAP</span>
+                            <span class="skill-item">Kali Linux</span>
+                            <span class="skill-item">Nessus</span>
+                            <span class="skill-item">Splunk</span>
+                            <span class="skill-item">John the Ripper</span>
+                            <span class="skill-item">Hashcat</span>
+                        </div>
+                    </div>
+
+                    <!-- Development Tools -->
+                    <div class="skill-category">
+                        <div class="category-header">
+                            <i class="fas fa-wrench"></i>
+                            <h3>Development Tools</h3>
+                        </div>
+                        <div class="skills-list">
+                            <span class="skill-item">Git & GitHub</span>
+                            <span class="skill-item">Docker</span>
+                            <span class="skill-item">VS Code</span>
+                            <span class="skill-item">Node.js</span>
+                            <span class="skill-item">Webpack</span>
+                            <span class="skill-item">NPM/Yarn</span>
+                            <span class="skill-item">Postman</span>
+                            <span class="skill-item">Jenkins</span>
+                            <span class="skill-item">AWS</span>
+                            <span class="skill-item">Firebase</span>
+                        </div>
+                    </div>
+
+                    <!-- Databases & Systems -->
+                    <div class="skill-category">
+                        <div class="category-header">
+                            <i class="fas fa-database"></i>
+                            <h3>Databases & Systems</h3>
+                        </div>
+                        <div class="skills-list">
+                            <span class="skill-item">MySQL</span>
+                            <span class="skill-item">PostgreSQL</span>
+                            <span class="skill-item">MongoDB</span>
+                            <span class="skill-item">Linux Administration</span>
+                            <span class="skill-item">Windows Server</span>
+                            <span class="skill-item">Active Directory</span>
+                            <span class="skill-item">VMware</span>
+                            <span class="skill-item">VirtualBox</span>
+                            <span class="skill-item">Apache/Nginx</span>
+                            <span class="skill-item">Redis</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="skills-column">
-          <h3>Cybersecurity</h3>
-          <ul>
-            <li>Network Security</li>
-            <li>OWASP Top 10</li>
-            <li>Vulnerability Assessment</li>
-            <li>Security Best Practices</li>
-            <li>Linux Security</li>
-          </ul>
-        </div>
-        <div class="skills-column">
-          <h3>Tools</h3>
-          <ul>
-            <li>Git & GitHub</li>
-            <li>Linux/Bash</li>
-            <li>OWASP ZAP</li>
-            <li>Burp Suite</li>
-            <li>VS Code</li>
-          </ul>
-        </div>
-      </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="projects-section" data-animate>
-      <div class="section-header">
-        <h2>Projects</h2>
-        <p>Some highlights from my portfolio & labs</p>
-      </div>
-      <div class="projects-grid">
-        <div class="project-card">
-          <h3>Password Manager (SecureVault)</h3>
-          <span class="status-badge">Web App</span>
-          <p class="project-impact">Built a full-featured password manager with React and Node.js. Integrated secure storage and encryption. Deployed using Docker.</p>
-          <ul>
-            <li>React, Node.js, MongoDB</li>
-            <li>OWASP ZAP tested</li>
-            <li>Dockerized</li>
-          </ul>
-          <a href="https://github.com/MusaMuthami1/SecureVault" target="_blank">View Code</a>
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-content">
+                <h2>Featured Projects</h2>
+                <p>Showcasing the intersection of security and innovation</p>
+                
+                <div class="projects-grid">
+                    <!-- SecureVault Project -->
+                    <div class="project featured" id="securevault">
+                        <div class="project-header">
+                            <div>
+                                <h3>SecureVault - Password Manager</h3>
+                                <span class="status-badge">Featured Project</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link">Live Demo</a>
+                                <a href="#" class="project-link">GitHub</a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <p>A comprehensive password management solution built with security-first principles. Features end-to-end encryption, secure authentication, and intuitive user experience.</p>
+                            <div class="project-impact">
+                                <strong>Impact:</strong> Designed to protect user credentials with bank-level security while maintaining ease of use.
+                            </div>
+                            <div class="tech-stack">
+                                <span class="tech">React.js</span>
+                                <span class="tech">Node.js</span>
+                                <span class="tech">AES-256 Encryption</span>
+                                <span class="tech">MongoDB</span>
+                                <span class="tech">JWT Authentication</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cybersecurity Portfolio -->
+                    <div class="project">
+                        <div class="project-header">
+                            <div>
+                                <h3>Interactive Cybersecurity Portfolio</h3>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link">Live Demo</a>
+                                <a href="#" class="project-link">GitHub</a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <p>A modern, responsive portfolio website showcasing cybersecurity expertise with interactive elements and performance optimizations.</p>
+                            <div class="tech-stack">
+                                <span class="tech">HTML5</span>
+                                <span class="tech">CSS3</span>
+                                <span class="tech">JavaScript</span>
+                                <span class="tech">GSAP Animations</span>
+                                <span class="tech">Responsive Design</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Network Security Scanner -->
+                    <div class="project">
+                        <div class="project-header">
+                            <div>
+                                <h3>Network Vulnerability Scanner</h3>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link">GitHub</a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <p>Automated network scanning tool for identifying security vulnerabilities and generating comprehensive reports for enterprise environments.</p>
+                            <div class="tech-stack">
+                                <span class="tech">Python</span>
+                                <span class="tech">Nmap</span>
+                                <span class="tech">Scapy</span>
+                                <span class="tech">SQLite</span>
+                                <span class="tech">Report Generation</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="project-card">
-          <h3>Vulnerability Lab</h3>
-          <span class="status-badge">Lab</span>
-          <p class="project-impact">Hands-on lab for testing and reporting web vulnerabilities. Automated scanning and reporting using open-source tools.</p>
-          <ul>
-            <li>Linux, Bash, OWASP ZAP</li>
-            <li>Custom scripts</li>
-          </ul>
-        </div>
-        <div class="project-card">
-          <h3>Portfolio Website</h3>
-          <span class="status-badge">This Site</span>
-          <p class="project-impact">Personal portfolio built with modern HTML, CSS, and accessibility in mind. Designed and secured by me.</p>
-          <ul>
-            <li>HTML5, CSS3, JavaScript</li>
-            <li>Accessibility features</li>
-          </ul>
-        </div>
-      </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact-section" data-animate>
-      <div class="section-header">
-        <h2>Contact</h2>
-        <p>Let's connect and build something amazing!</p>
-      </div>
-      <div class="contact-info">
-        <a href="mailto:musamuthami1@gmail.com"><i class="fas fa-envelope"></i> musamuthami1@gmail.com</a>
-        <a href="https://github.com/MusaMuthami1" target="_blank"><i class="fab fa-github"></i> github.com/MusaMuthami1</a>
-        <a href="https://www.linkedin.com/in/musamuthami1/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-      </div>
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-wrapper">
+                <!-- Left Side - Contact Info & CTA -->
+                <div class="contact-info-section" data-aos="fade-right" data-aos-delay="200">
+                    <div class="contact-header">
+                        <h2>Let's Work <span class="highlight">Together</span><br>on Your Next Project</h2>
+                        <p>Ready to bring your ideas to life? I'm here to help you create something amazing. Let's discuss your vision!</p>
+                    </div>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item" data-aos="fade-up" data-aos-delay="300">
+                            <a href="tel:+254114945842" class="contact-icon phone-icon" title="Call Musa Mwange">
+                                <img src="images/icons/phone.svg" alt="Phone" class="real-contact-icon">
+                            </a>
+                            <div class="contact-text">
+                                <span class="contact-label">Phone</span>
+                                <a href="tel:+254114945842" class="contact-value">+254 114 945 842</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item" data-aos="fade-up" data-aos-delay="400">
+                            <a href="https://wa.me/254114945842?text=Hello%20Musa!%20I'm%20interested%20in%20discussing%20a%20project%20with%20you." target="_blank" rel="noopener" class="contact-icon whatsapp-icon" title="Chat with me on WhatsApp">
+                                <img src="images/icons/whatsapp.svg" alt="WhatsApp" class="real-contact-icon">
+                            </a>
+                            <div class="contact-text">
+                                <span class="contact-label">WhatsApp</span>
+                                <a href="https://wa.me/254114945842?text=Hello%20Musa!%20I'm%20interested%20in%20discussing%20a%20project%20with%20you." target="_blank" rel="noopener" class="contact-value">Chat on WhatsApp</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item" data-aos="fade-up" data-aos-delay="500">
+                            <a href="mailto:musamwange2@gmail.com?subject=Project%20Inquiry&body=Hello%20Musa,%0D%0A%0D%0AI'm%20interested%20in%20discussing%20a%20project%20with%20you.%0D%0A%0D%0ABest%20regards" class="contact-icon email-icon" title="Send email to Musa Mwange">
+                                <img src="images/icons/email.svg" alt="Email" class="real-contact-icon">
+                            </a>
+                            <div class="contact-text">
+                                <span class="contact-label">Email</span>
+                                <a href="mailto:musamwange2@gmail.com?subject=Project%20Inquiry&body=Hello%20Musa,%0D%0A%0D%0AI'm%20interested%20in%20discussing%20a%20project%20with%20you.%0D%0A%0D%0ABest%20regards" class="contact-value">musamwange2@gmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item" data-aos="fade-up" data-aos-delay="600">
+                            <div class="contact-icon location-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <span class="contact-label">Location</span>
+                                <span class="contact-value">Nairobi, Kenya</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="cta-section">
+                        <h3>Want to Know More About Me?</h3>
+                        <a href="#about" class="cta-button">
+                            <span>Learn About My Journey</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Right Side - Contact Form -->
+                <div class="contact-form-section" data-aos="fade-left" data-aos-delay="400">
+                    <form id="secureContactForm" class="secure-contact-form" method="POST" action="#" novalidate>
+                        <!-- Honeypot for spam protection -->
+                        <div class="honeypot">
+                            <input type="text" name="website" id="website" value="">
+                        </div>
+                        
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="fullName">
+                                    <i class="fas fa-user"></i> Full Name *
+                                </label>
+                                <input 
+                                    type="text" 
+                                    id="fullName" 
+                                    name="fullName" 
+                                    placeholder="Full Name" 
+                                    required 
+                                    minlength="2" 
+                                    maxlength="50"
+                                    pattern="[A-Za-z\s]+"
+                                    autocomplete="name"
+                                >
+                                <span class="form-line"></span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="emailAddress">
+                                    <i class="fas fa-envelope"></i> Email Address *
+                                </label>
+                                <input 
+                                    type="email" 
+                                    id="emailAddress" 
+                                    name="emailAddress" 
+                                    placeholder="Email Address" 
+                                    required 
+                                    maxlength="100"
+                                    autocomplete="email"
+                                >
+                                <span class="form-line"></span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phoneNumber">
+                                    <i class="fas fa-phone"></i> Phone Number
+                                </label>
+                                <div class="phone-input-container">
+                                    <div class="custom-dropdown" id="countryDropdown">
+                                        <div class="dropdown-selected" data-placeholder="Select Country">
+                                            <span class="dropdown-text"><img src="images/flags/ke.svg" alt="Kenya" class="flag-icon"> Kenya (+254)</span>
+                                            <i class="fas fa-chevron-down dropdown-arrow"></i>
+                                        </div>
+                                        <div class="dropdown-options">
+                                            <div class="dropdown-search">
+                                                <input type="text" placeholder="Search countries..." class="dropdown-search-input">
+                                            </div>
+                                            <div class="dropdown-list">
+                                                <div class="dropdown-option" data-value="+1"><img src="images/flags/us.svg" alt="United States" class="flag-icon"> United States (+1)</div>
+                                                <div class="dropdown-option" data-value="+44"><img src="images/flags/gb.svg" alt="United Kingdom" class="flag-icon"> United Kingdom (+44)</div>
+                                                <div class="dropdown-option" data-value="+49"><img src="images/flags/de.svg" alt="Germany" class="flag-icon"> Germany (+49)</div>
+                                                <div class="dropdown-option" data-value="+91"><img src="images/flags/in.svg" alt="India" class="flag-icon"> India (+91)</div>
+                                                <div class="dropdown-option selected" data-value="+254"><img src="images/flags/ke.svg" alt="Kenya" class="flag-icon"> Kenya (+254)</div>
+                                                <!-- ...other countries, fallback to emoji or add more SVGs as needed... -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input type="hidden" id="countryCode" name="countryCode" value="+254">
+                                    <input 
+                                        type="tel" 
+                                        id="phoneNumber" 
+                                        name="phoneNumber" 
+                                        placeholder="123 456 789" 
+                                        maxlength="15"
+                                        pattern="[0-9\s\-]+"
+                                        autocomplete="tel"
+                                    >
+                                </div>
+                                <span class="form-line"></span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="location">
+                                    <i class="fas fa-map-marker-alt"></i> Location
+                                </label>
+                                <select id="location" name="location" class="location-select">
+                                    <option value="">Select Your Location</option>
+                                    <option value="Abuja, Nigeria">Abuja, Nigeria</option>
+                                    <option value="Abu Dhabi, UAE">Abu Dhabi, UAE</option>
+                                    <option value="Accra, Ghana">Accra, Ghana</option>
+                                    <option value="Adelaide, Australia">Adelaide, Australia</option>
+                                    <option value="Addis Ababa, Ethiopia">Addis Ababa, Ethiopia</option>
+                                    <option value="Algiers, Algeria">Algiers, Algeria</option>
+                                    <option value="Almaty, Kazakhstan">Almaty, Kazakhstan</option>
+                                    <option value="Amsterdam, Netherlands">Amsterdam, Netherlands</option>
+                                    <option value="Ankara, Turkey">Ankara, Turkey</option>
+                                    <option value="Antwerp, Belgium">Antwerp, Belgium</option>
+                                    <option value="Arequipa, Peru">Arequipa, Peru</option>
+                                    <option value="Asunción, Paraguay">Asunción, Paraguay</option>
+                                    <option value="Athens, Greece">Athens, Greece</option>
+                                    <option value="Atlanta, USA">Atlanta, USA</option>
+                                    <option value="Auckland, New Zealand">Auckland, New Zealand</option>
+                                    <option value="Austin, USA">Austin, USA</option>
+                                    <option value="Bangkok, Thailand">Bangkok, Thailand</option>
+                                    <option value="Barcelona, Spain">Barcelona, Spain</option>
+                                    <option value="Beijing, China">Beijing, China</option>
+                                    <option value="Bergen, Norway">Bergen, Norway</option>
+                                    <option value="Berlin, Germany">Berlin, Germany</option>
+                                    <option value="Birmingham, UK">Birmingham, UK</option>
+                                    <option value="Bogotá, Colombia">Bogotá, Colombia</option>
+                                    <option value="Boston, USA">Boston, USA</option>
+                                    <option value="Brasília, Brazil">Brasília, Brazil</option>
+                                    <option value="Brisbane, Australia">Brisbane, Australia</option>
+                                    <option value="Brussels, Belgium">Brussels, Belgium</option>
+                                    <option value="Bucharest, Romania">Bucharest, Romania</option>
+                                    <option value="Budapest, Hungary">Budapest, Hungary</option>
+                                    <option value="Buenos Aires, Argentina">Buenos Aires, Argentina</option>
+                                    <option value="Busan, South Korea">Busan, South Korea</option>
+                                    <option value="Cairo, Egypt">Cairo, Egypt</option>
+                                    <option value="Calgary, Canada">Calgary, Canada</option>
+                                    <option value="Cali, Colombia">Cali, Colombia</option>
+                                    <option value="Canberra, Australia">Canberra, Australia</option>
+                                    <option value="Cape Town, South Africa">Cape Town, South Africa</option>
+                                    <option value="Caracas, Venezuela">Caracas, Venezuela</option>
+                                    <option value="Casablanca, Morocco">Casablanca, Morocco</option>
+                                    <option value="Cebu, Philippines">Cebu, Philippines</option>
+                                    <option value="Chennai, India">Chennai, India</option>
+                                    <option value="Chiang Mai, Thailand">Chiang Mai, Thailand</option>
+                                    <option value="Chicago, USA">Chicago, USA</option>
+                                    <option value="Christchurch, New Zealand">Christchurch, New Zealand</option>
+                                    <option value="Copenhagen, Denmark">Copenhagen, Denmark</option>
+                                    <option value="Cork, Ireland">Cork, Ireland</option>
+                                    <option value="Córdoba, Argentina">Córdoba, Argentina</option>
+                                    <option value="Dallas, USA">Dallas, USA</option>
+                                    <option value="Dar es Salaam, Tanzania">Dar es Salaam, Tanzania</option>
+                                    <option value="Delhi, India">Delhi, India</option>
+                                    <option value="Denver, USA">Denver, USA</option>
+                                    <option value="Dodoma, Tanzania">Dodoma, Tanzania</option>
+                                    <option value="Doha, Qatar">Doha, Qatar</option>
+                                    <option value="Dubai, UAE">Dubai, UAE</option>
+                                    <option value="Dublin, Ireland">Dublin, Ireland</option>
+                                    <option value="Durban, South Africa">Durban, South Africa</option>
+                                    <option value="Edinburgh, UK">Edinburgh, UK</option>
+                                    <option value="Edmonton, Canada">Edmonton, Canada</option>
+                                    <option value="Eldoret, Kenya">Eldoret, Kenya</option>
+                                    <option value="Fortaleza, Brazil">Fortaleza, Brazil</option>
+                                    <option value="Frankfurt, Germany">Frankfurt, Germany</option>
+                                    <option value="Gaborone, Botswana">Gaborone, Botswana</option>
+                                    <option value="Geneva, Switzerland">Geneva, Switzerland</option>
+                                    <option value="Glasgow, UK">Glasgow, UK</option>
+                                    <option value="Gold Coast, Australia">Gold Coast, Australia</option>
+                                    <option value="Gothenburg, Sweden">Gothenburg, Sweden</option>
+                                    <option value="Guadalajara, Mexico">Guadalajara, Mexico</option>
+                                    <option value="Guangzhou, China">Guangzhou, China</option>
+                                    <option value="Guayaquil, Ecuador">Guayaquil, Ecuador</option>
+                                    <option value="Hamburg, Germany">Hamburg, Germany</option>
+                                    <option value="Hamilton, New Zealand">Hamilton, New Zealand</option>
+                                    <option value="Hanoi, Vietnam">Hanoi, Vietnam</option>
+                                    <option value="Harare, Zimbabwe">Harare, Zimbabwe</option>
+                                    <option value="Helsinki, Finland">Helsinki, Finland</option>
+                                    <option value="Ho Chi Minh City, Vietnam">Ho Chi Minh City, Vietnam</option>
+                                    <option value="Hong Kong">Hong Kong</option>
+                                    <option value="Houston, USA">Houston, USA</option>
+                                    <option value="Hyderabad, India">Hyderabad, India</option>
+                                    <option value="Istanbul, Turkey">Istanbul, Turkey</option>
+                                    <option value="Jakarta, Indonesia">Jakarta, Indonesia</option>
+                                    <option value="Jeddah, Saudi Arabia">Jeddah, Saudi Arabia</option>
+                                    <option value="Jerusalem, Israel">Jerusalem, Israel</option>
+                                    <option value="Johannesburg, South Africa">Johannesburg, South Africa</option>
+                                    <option value="Kampala, Uganda">Kampala, Uganda</option>
+                                    <option value="Kano, Nigeria">Kano, Nigeria</option>
+                                    <option value="Kiev, Ukraine">Kiev, Ukraine</option>
+                                    <option value="Kigali, Rwanda">Kigali, Rwanda</option>
+                                    <option value="Kisumu, Kenya">Kisumu, Kenya</option>
+                                    <option value="Kolkata, India">Kolkata, India</option>
+                                    <option value="Krakow, Poland">Krakow, Poland</option>
+                                    <option value="Kuala Lumpur, Malaysia">Kuala Lumpur, Malaysia</option>
+                                    <option value="Kumasi, Ghana">Kumasi, Ghana</option>
+                                    <option value="Kuwait City, Kuwait">Kuwait City, Kuwait</option>
+                                    <option value="Kyoto, Japan">Kyoto, Japan</option>
+                                    <option value="La Paz, Bolivia">La Paz, Bolivia</option>
+                                    <option value="Lagos, Nigeria">Lagos, Nigeria</option>
+                                    <option value="Las Vegas, USA">Las Vegas, USA</option>
+                                    <option value="Lima, Peru">Lima, Peru</option>
+                                    <option value="Lisbon, Portugal">Lisbon, Portugal</option>
+                                    <option value="London, UK">London, UK</option>
+                                    <option value="Los Angeles, USA">Los Angeles, USA</option>
+                                    <option value="Lusaka, Zambia">Lusaka, Zambia</option>
+                                    <option value="Lyon, France">Lyon, France</option>
+                                    <option value="Madrid, Spain">Madrid, Spain</option>
+                                    <option value="Manama, Bahrain">Manama, Bahrain</option>
+                                    <option value="Manchester, UK">Manchester, UK</option>
+                                    <option value="Manila, Philippines">Manila, Philippines</option>
+                                    <option value="Maputo, Mozambique">Maputo, Mozambique</option>
+                                    <option value="Maracaibo, Venezuela">Maracaibo, Venezuela</option>
+                                    <option value="Marseille, France">Marseille, France</option>
+                                    <option value="Medellín, Colombia">Medellín, Colombia</option>
+                                    <option value="Melbourne, Australia">Melbourne, Australia</option>
+                                    <option value="Mexico City, Mexico">Mexico City, Mexico</option>
+                                    <option value="Miami, USA">Miami, USA</option>
+                                    <option value="Milan, Italy">Milan, Italy</option>
+                                    <option value="Minsk, Belarus">Minsk, Belarus</option>
+                                    <option value="Mombasa, Kenya">Mombasa, Kenya</option>
+                                    <option value="Monterrey, Mexico">Monterrey, Mexico</option>
+                                    <option value="Montreal, Canada">Montreal, Canada</option>
+                                    <option value="Montevideo, Uruguay">Montevideo, Uruguay</option>
+                                    <option value="Moscow, Russia">Moscow, Russia</option>
+                                    <option value="Mumbai, India">Mumbai, India</option>
+                                    <option value="Munich, Germany">Munich, Germany</option>
+                                    <option value="Nairobi, Kenya">Nairobi, Kenya</option>
+                                    <option value="Nakuru, Kenya">Nakuru, Kenya</option>
+                                    <option value="Naples, Italy">Naples, Italy</option>
+                                    <option value="Newcastle, Australia">Newcastle, Australia</option>
+                                    <option value="New York, USA">New York, USA</option>
+                                    <option value="Osaka, Japan">Osaka, Japan</option>
+                                    <option value="Oslo, Norway">Oslo, Norway</option>
+                                    <option value="Ottawa, Canada">Ottawa, Canada</option>
+                                    <option value="Paris, France">Paris, France</option>
+                                    <option value="Perth, Australia">Perth, Australia</option>
+                                    <option value="Philadelphia, USA">Philadelphia, USA</option>
+                                    <option value="Phoenix, USA">Phoenix, USA</option>
+                                    <option value="Port Moresby, Papua New Guinea">Port Moresby, Papua New Guinea</option>
+                                    <option value="Porto, Portugal">Porto, Portugal</option>
+                                    <option value="Prague, Czech Republic">Prague, Czech Republic</option>
+                                    <option value="Quebec City, Canada">Quebec City, Canada</option>
+                                    <option value="Quito, Ecuador">Quito, Ecuador</option>
+                                    <option value="Rabat, Morocco">Rabat, Morocco</option>
+                                    <option value="Rio de Janeiro, Brazil">Rio de Janeiro, Brazil</option>
+                                    <option value="Riyadh, Saudi Arabia">Riyadh, Saudi Arabia</option>
+                                    <option value="Rome, Italy">Rome, Italy</option>
+                                    <option value="Rosario, Argentina">Rosario, Argentina</option>
+                                    <option value="Rotterdam, Netherlands">Rotterdam, Netherlands</option>
+                                    <option value="Salvador, Brazil">Salvador, Brazil</option>
+                                    <option value="San Antonio, USA">San Antonio, USA</option>
+                                    <option value="San Diego, USA">San Diego, USA</option>
+                                    <option value="San Francisco, USA">San Francisco, USA</option>
+                                    <option value="San Jose, USA">San Jose, USA</option>
+                                    <option value="Santa Cruz, Bolivia">Santa Cruz, Bolivia</option>
+                                    <option value="Santiago, Chile">Santiago, Chile</option>
+                                    <option value="São Paulo, Brazil">São Paulo, Brazil</option>
+                                    <option value="Seattle, USA">Seattle, USA</option>
+                                    <option value="Seoul, South Korea">Seoul, South Korea</option>
+                                    <option value="Shanghai, China">Shanghai, China</option>
+                                    <option value="Shenzhen, China">Shenzhen, China</option>
+                                    <option value="Singapore">Singapore</option>
+                                    <option value="Sofia, Bulgaria">Sofia, Bulgaria</option>
+                                    <option value="St. Petersburg, Russia">St. Petersburg, Russia</option>
+                                    <option value="Stockholm, Sweden">Stockholm, Sweden</option>
+                                    <option value="Surabaya, Indonesia">Surabaya, Indonesia</option>
+                                    <option value="Suva, Fiji">Suva, Fiji</option>
+                                    <option value="Sydney, Australia">Sydney, Australia</option>
+                                    <option value="Tashkent, Uzbekistan">Tashkent, Uzbekistan</option>
+                                    <option value="Tel Aviv, Israel">Tel Aviv, Israel</option>
+                                    <option value="Thessaloniki, Greece">Thessaloniki, Greece</option>
+                                    <option value="Tijuana, Mexico">Tijuana, Mexico</option>
+                                    <option value="Tokyo, Japan">Tokyo, Japan</option>
+                                    <option value="Toronto, Canada">Toronto, Canada</option>
+                                    <option value="Tunis, Tunisia">Tunis, Tunisia</option>
+                                    <option value="Valencia, Spain">Valencia, Spain</option>
+                                    <option value="Valparaíso, Chile">Valparaíso, Chile</option>
+                                    <option value="Vancouver, Canada">Vancouver, Canada</option>
+                                    <option value="Vienna, Austria">Vienna, Austria</option>
+                                    <option value="Warsaw, Poland">Warsaw, Poland</option>
+                                    <option value="Washington DC, USA">Washington DC, USA</option>
+                                    <option value="Wellington, New Zealand">Wellington, New Zealand</option>
+                                    <option value="Windhoek, Namibia">Windhoek, Namibia</option>
+                                    <option value="Winnipeg, Canada">Winnipeg, Canada</option>
+                                    <option value="Zurich, Switzerland">Zurich, Switzerland</option>
+                                    <option value="Other">Other (Please specify in message)</option>
+                                </select>
+                                <span class="form-line"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group full-width">
+                            <label for="expertise">
+                                <i class="fas fa-tools"></i> What Expertise You're Interested In
+                            </label>
+                            <select id="expertise" name="expertise" required>
+                                <option value="">Select Service</option>
+                                <option value="cybersecurity">Cybersecurity Consulting</option>
+                                <option value="web-development">Web Development</option>
+                                <option value="penetration-testing">Penetration Testing</option>
+                                <option value="security-audit">Security Audit</option>
+                                <option value="frontend-development">Frontend Development</option>
+                                <option value="fullstack-development">Full-Stack Development</option>
+                                <option value="consultation">General Consultation</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <span class="form-line"></span>
+                        </div>
+                        
+                        <div class="form-group full-width">
+                            <label for="projectDetails">
+                                <i class="fas fa-comment-dots"></i> Tell Me About Your Project *
+                            </label>
+                            <textarea 
+                                id="projectDetails" 
+                                name="projectDetails" 
+                                placeholder="Leave your message here" 
+                                required 
+                                minlength="10" 
+                                maxlength="1000"
+                                rows="5"
+                            ></textarea>
+                            <span class="form-line"></span>
+                        </div>
+                        
+                        <!-- Rate Limiting Protection -->
+                        <div class="rate-limit-info">
+                            <span id="rate-limit-counter">0</span>
+                        </div>
+                        
+                        <button type="submit" class="submit-button" id="submitBtn">
+                            <span class="btn-text">
+                                <i class="fas fa-paper-plane"></i>
+                                Submit
+                            </span>
+                            <span class="btn-loading hidden">
+                                <i class="fas fa-spinner fa-spin"></i>
+                                Sending...
+                            </span>
+                        </button>
+                        
+                        <div id="formStatus" class="form-status"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Background Elements -->
+        <div class="contact-bg-elements">
+            <div class="floating-shape shape-1"></div>
+            <div class="floating-shape shape-2"></div>
+            <div class="floating-shape shape-3"></div>
+        </div>
     </section>
 
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <h3>Musa Mwange</h3>
+                        <p>Cybersecurity Specialist & Frontend Developer</p>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4><i class="fas fa-link"></i> Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+                        <li><a href="#projects"><i class="fas fa-briefcase"></i> Projects</a></li>
+                        <li><a href="#skills"><i class="fas fa-cogs"></i> Skills</a></li>
+                        <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4><i class="fas fa-shield-alt"></i> Services</h4>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-lock"></i> Cybersecurity Consulting</li>
+                        <li><i class="fas fa-code"></i> Web Development</li>
+                        <li><i class="fas fa-search"></i> Penetration Testing</li>
+                        <li><i class="fas fa-clipboard-check"></i> Security Auditing</li>
+                        <li><i class="fas fa-desktop"></i> Frontend Development</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <div class="footer-connect">
+                        <a href="tel:+254114945842" class="social-link phone" title="Call Me">
+                            <img src="images/icons/phone.svg" alt="Phone" class="real-contact-icon">
+                        </a>
+                        <a href="https://wa.me/254114945842" target="_blank" rel="noopener" class="social-link whatsapp" title="WhatsApp">
+                            <img src="images/icons/whatsapp.svg" alt="WhatsApp" class="real-contact-icon">
+                        </a>
+                        <a href="mailto:musamwange2@gmail.com" class="social-link email" title="Email">
+                            <img src="images/icons/email.svg" alt="Email" class="real-contact-icon">
+                        </a>
+                        <a href="https://linkedin.com/in/musamwange" target="_blank" rel="noopener" class="social-link linkedin" title="LinkedIn">
+                            <img src="images/icons/linkedin.svg" alt="LinkedIn" class="real-contact-icon">
+                        </a>
+                        <a href="https://github.com/MusaMuthami1" target="_blank" rel="noopener" class="social-link github" title="GitHub">
+                            <img src="images/icons/github.svg" alt="GitHub" class="real-contact-icon">
+                        </a>
+                        <a href="https://twitter.com/musamwange" target="_blank" rel="noopener" class="social-link twitter" title="Twitter">
+                            <img src="images/icons/twitter.svg" alt="Twitter" class="real-contact-icon">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-content custom-footer-bottom">
+                    <div class="footer-flags">
+                        <img src="images/flags/ke.svg" alt="Kenya" class="flag-icon">
+                        <img src="images/flags/us.svg" alt="United States" class="flag-icon">
+                        <img src="images/flags/gb.svg" alt="United Kingdom" class="flag-icon">
+                        <img src="images/flags/de.svg" alt="Germany" class="flag-icon">
+                        <img src="images/flags/in.svg" alt="India" class="flag-icon">
+                    </div>
+                    <div class="copyright custom-copyright">
+                        <span class="copyright-text">&copy; 2025 Musa Mwange. All rights reserved.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
     <script src="js/main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100
+        });
+    </script>
 </body>
 </html>
