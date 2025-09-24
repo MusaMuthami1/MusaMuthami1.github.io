@@ -1,3 +1,120 @@
+/* --- Dark Modern Contact Card (Inspired by Reference) --- */
+.contact-dark-bg {
+    width: 100vw;
+    background: linear-gradient(135deg, #0f172a 60%, #2563eb 100%);
+    padding: 64px 0 64px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact-card {
+    background: rgba(17, 24, 39, 0.98);
+    border-radius: 18px;
+    box-shadow: 0 4px 48px 0 rgba(37,99,235,0.18), 0 1.5px 8px 0 rgba(0,0,0,0.18);
+    padding: 2.5rem 2rem 2rem 2rem;
+    max-width: 420px;
+    width: 100%;
+    color: #fff;
+    position: relative;
+}
+.contact-card-header h2 {
+    font-size: 2.1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+.contact-card-header p {
+    color: #cbd5e1;
+    font-size: 1.05rem;
+    margin-bottom: 2.2rem;
+}
+.contact-card-header a {
+    color: #60a5fa;
+    text-decoration: underline;
+}
+.contact-card-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+}
+.contact-card-form .input-group {
+    position: relative;
+    margin-bottom: 0.5rem;
+}
+.contact-card-form input,
+.contact-card-form textarea {
+    width: 100%;
+    padding: 1.1rem 1rem 0.6rem 1rem;
+    background: #1e293b;
+    border: 1.5px solid #334155;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1rem;
+    transition: border 0.2s, box-shadow 0.2s;
+    outline: none;
+    resize: none;
+}
+.contact-card-form input:focus,
+.contact-card-form textarea:focus {
+    border: 1.5px solid #6366f1;
+    box-shadow: 0 0 0 2px #6366f1aa;
+}
+.contact-card-form label {
+    position: absolute;
+    left: 1rem;
+    top: 1.1rem;
+    color: #94a3b8;
+    font-size: 1rem;
+    pointer-events: none;
+    background: transparent;
+    transition: 0.18s cubic-bezier(.4,0,.2,1);
+}
+.contact-card-form input:focus + label,
+.contact-card-form input:not(:placeholder-shown) + label,
+.contact-card-form textarea:focus + label,
+.contact-card-form textarea:not(:placeholder-shown) + label {
+    top: -0.7rem;
+    left: 0.8rem;
+    font-size: 0.85rem;
+    color: #60a5fa;
+    background: #111827;
+    padding: 0 0.3rem;
+    border-radius: 4px;
+}
+.contact-card-form textarea {
+    min-height: 110px;
+    max-height: 220px;
+}
+.contact-card-btn {
+    margin-top: 0.7rem;
+    background: linear-gradient(90deg, #6366f1 0%, #2563eb 100%);
+    color: #fff;
+    font-size: 1.08rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    padding: 0.95rem 2.2rem;
+    cursor: pointer;
+    box-shadow: 0 2px 12px rgba(99,102,241,0.13);
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    justify-content: center;
+    transition: background 0.18s, box-shadow 0.18s;
+}
+.contact-card-btn:hover {
+    background: linear-gradient(90deg, #2563eb 0%, #6366f1 100%);
+    box-shadow: 0 4px 24px rgba(99,102,241,0.18);
+}
+@media (max-width: 600px) {
+    .contact-card {
+        padding: 1.2rem 0.5rem 1.2rem 0.5rem;
+        max-width: 98vw;
+    }
+    .contact-dark-bg {
+        padding: 32px 0 32px 0;
+    }
+}
 /* --- Modern Contact Form (2025 Redesign) --- */
 .modern-contact-new {
     display: flex;
