@@ -1,3 +1,44 @@
+.contact-card {
+    animation: fadeInUp 0.7s cubic-bezier(.4,0,.2,1);
+}
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.contact-card-form .input-group {
+    margin-bottom: 1.2rem;
+}
+.contact-card-form input,
+.contact-card-form textarea {
+    box-shadow: 0 1.5px 8px 0 rgba(37,99,235,0.04);
+    transition: border 0.2s, box-shadow 0.2s, background 0.2s;
+}
+.contact-card-form input:focus,
+.contact-card-form textarea:focus {
+    background: #232946;
+    border: 1.5px solid #60a5fa;
+    box-shadow: 0 0 0 3px #60a5fa33;
+}
+.contact-card-form label {
+    transition: color 0.18s, font-size 0.18s, top 0.18s, left 0.18s;
+}
+.contact-card-btn {
+    margin-top: 1.2rem;
+    font-size: 1.13rem;
+    letter-spacing: 0.01em;
+    box-shadow: 0 4px 24px rgba(99,102,241,0.18), 0 1.5px 8px 0 rgba(0,0,0,0.10);
+    transition: background 0.18s, box-shadow 0.18s, transform 0.18s;
+}
+.contact-card-btn:active {
+    transform: scale(0.97);
+}
+.contact-card-header h2 {
+    letter-spacing: -0.5px;
+    margin-bottom: 0.3rem;
+}
+.contact-card-header p {
+    margin-bottom: 2.5rem;
+}
 /* --- Dark Modern Contact Card (Inspired by Reference) --- */
 .contact-dark-bg {
     width: 100vw;
