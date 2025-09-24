@@ -375,160 +375,62 @@
                             </div>
                             <div class="contact-text">
                                 <span class="contact-label">Location</span>
-                                <span class="contact-value">Nairobi, Kenya</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="cta-section">
-                        <h3>Want to Know More About Me?</h3>
-                        <a href="#about" class="cta-button">
-                            <span>Learn About My Journey</span>
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Right Side - Contact Form -->
-                <div class="contact-form-section" data-aos="fade-left" data-aos-delay="400">
-                    <form id="secureContactForm" class="secure-contact-form" method="POST" action="#" novalidate>
-                        <!-- Honeypot for spam protection -->
-                        <div class="honeypot">
-                            <input type="text" name="website" id="website" value="">
-                        </div>
-                        <div class="form-grid modern-contact-grid">
-                            <div class="form-group">
-                                <label for="fullName">Full Name *</label>
-                                <input type="text" id="fullName" name="fullName" placeholder="Full Name" required minlength="2" maxlength="50" pattern="[A-Za-z\s]+" autocomplete="name">
-                            </div>
-                            <div class="form-group">
-                                <label for="emailAddress">Email Address *</label>
-                                <input type="email" id="emailAddress" name="emailAddress" placeholder="Email Address" required maxlength="100" autocomplete="email">
-                            </div>
-                            <div class="form-group">
-                                <label for="phoneNumber">Phone Number</label>
-                                <div class="phone-input-container">
-                                    <div class="custom-dropdown" id="countryDropdown">
-                                        <div class="dropdown-selected" data-placeholder="Select Country">
-                                            <span class="dropdown-text"><img src="images/flags/ke.svg" alt="Kenya" class="flag-icon"> Kenya (+254)</span>
-                                            <i class="fas fa-chevron-down dropdown-arrow"></i>
+                                <section id="contact" class="contact">
+                                  <div class="container">
+                                    <div class="modern-contact-new">
+                                      <div class="contact-intro">
+                                        <h2>Let's Connect <span class="highlight">Globally</span></h2>
+                                        <p>Have a project or idea? Reach out and let's build something amazing together.</p>
+                                        <ul class="contact-methods">
+                                          <li><img src="images/icons/phone.svg" alt="Phone" class="real-contact-icon"> <a href="tel:+254114945842">+254 114 945 842</a></li>
+                                          <li><img src="images/icons/email.svg" alt="Email" class="real-contact-icon"> <a href="mailto:musamwange2@gmail.com">musamwange2@gmail.com</a></li>
+                                          <li><img src="images/icons/whatsapp.svg" alt="WhatsApp" class="real-contact-icon"> <a href="https://wa.me/254114945842" target="_blank" rel="noopener">WhatsApp</a></li>
+                                          <li><img src="images/icons/location.svg" alt="Location" class="real-contact-icon"> Nairobi, Kenya</li>
+                                        </ul>
+                                      </div>
+                                      <form class="modern-contact-form" autocomplete="off">
+                                        <div class="form-row">
+                                          <div class="form-group">
+                                            <label for="name">Full Name</label>
+                                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                                          </div>
+                                          <div class="form-group">
+                                            <label for="email">Email</label>
+                                            <input type="email" id="email" name="email" placeholder="you@email.com" required>
+                                          </div>
                                         </div>
-                                        <div class="dropdown-options">
-                                            <div class="dropdown-search">
-                                                <input type="text" placeholder="Search countries..." class="dropdown-search-input">
-                                            </div>
-                                            <div class="dropdown-list">
-                                                <div class="dropdown-option" data-value="+1"><img src="images/flags/us.svg" alt="United States" class="flag-icon"> United States (+1)</div>
-                                                <div class="dropdown-option" data-value="+44"><img src="images/flags/gb.svg" alt="United Kingdom" class="flag-icon"> United Kingdom (+44)</div>
-                                                <div class="dropdown-option" data-value="+49"><img src="images/flags/de.svg" alt="Germany" class="flag-icon"> Germany (+49)</div>
-                                                <div class="dropdown-option" data-value="+91"><img src="images/flags/in.svg" alt="India" class="flag-icon"> India (+91)</div>
-                                                <div class="dropdown-option selected" data-value="+254"><img src="images/flags/ke.svg" alt="Kenya" class="flag-icon"> Kenya (+254)</div>
-                                            </div>
+                                        <div class="form-row">
+                                          <div class="form-group">
+                                            <label for="country">Country</label>
+                                            <select id="country" name="country" required>
+                                              <option value="">Select Country</option>
+                                              <option value="Kenya">Kenya</option>
+                                              <option value="Nigeria">Nigeria</option>
+                                              <option value="United States">United States</option>
+                                              <option value="United Kingdom">United Kingdom</option>
+                                              <option value="Germany">Germany</option>
+                                              <option value="India">India</option>
+                                              <option value="Other">Other</option>
+                                            </select>
+                                          </div>
+                                          <div class="form-group">
+                                            <label for="phone">Phone</label>
+                                            <input type="tel" id="phone" name="phone" placeholder="e.g. +254 123 456 789">
+                                          </div>
                                         </div>
+                                        <div class="form-row">
+                                          <div class="form-group full-width">
+                                            <label for="message">Message</label>
+                                            <textarea id="message" name="message" rows="4" placeholder="Tell me about your project or inquiry..." required></textarea>
+                                          </div>
+                                        </div>
+                                        <button type="submit" class="modern-submit-btn">
+                                          <img src="images/icons/send.svg" alt="Send" class="real-contact-icon"> Send Message
+                                        </button>
+                                      </form>
                                     </div>
-                                    <input type="hidden" id="countryCode" name="countryCode" value="+254">
-                                    <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="123 456 789" maxlength="15" pattern="[0-9\s\-]+" autocomplete="tel">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="location">Location</label>
-                                <select id="location" name="location" class="location-select">
-                                    <option value="">Select Your Location</option>
-                                    <option value="Nairobi, Kenya">Nairobi, Kenya</option>
-                                    <option value="Lagos, Nigeria">Lagos, Nigeria</option>
-                                    <option value="London, UK">London, UK</option>
-                                    <option value="New York, USA">New York, USA</option>
-                                    <option value="Other">Other (Please specify in message)</option>
-                                </select>
-                            </div>
-                            <div class="form-group full-width">
-                                <label for="expertise"><i class="fas fa-tools"></i> What Expertise You're Interested In</label>
-                                <select id="expertise" name="expertise" required>
-                                    <option value="">Select Service</option>
-                                    <option value="cybersecurity">Cybersecurity Consulting</option>
-                                    <option value="web-development">Web Development</option>
-                                    <option value="penetration-testing">Penetration Testing</option>
-                                    <option value="security-audit">Security Audit</option>
-                                    <option value="frontend-development">Frontend Development</option>
-                                    <option value="fullstack-development">Full-Stack Development</option>
-                                    <option value="consultation">General Consultation</option>
-                                    <option value="other">Other</option>
-                                </select>
-                            </div>
-                            <div class="form-group full-width">
-                                <label for="projectDetails"><i class="fas fa-comment-dots"></i> Tell Me About Your Project *</label>
-                                <textarea id="projectDetails" name="projectDetails" placeholder="Leave your message here" required minlength="10" maxlength="1000" rows="5"></textarea>
-                            </div>
-                        </div>
-                        <!-- Rate Limiting Protection -->
-                        <div class="rate-limit-info">
-                            <span id="rate-limit-counter">0</span>
-                        </div>
-                        <button type="submit" class="submit-button" id="submitBtn">
-                            <span class="btn-text"><i class="fas fa-paper-plane"></i> Submit</span>
-                            <span class="btn-loading hidden"><i class="fas fa-spinner fa-spin"></i> Sending...</span>
-                        </button>
-                        <div id="formStatus" class="form-status"></div>
-                    </form>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Background Elements -->
-        <div class="contact-bg-elements">
-            <div class="floating-shape shape-1"></div>
-            <div class="floating-shape shape-2"></div>
-            <div class="floating-shape shape-3"></div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <div class="footer-logo">
-                        <h3>Musa Mwange</h3>
-                        <p>Cybersecurity Specialist & Frontend Developer</p>
-                    </div>
-                </div>
-                
-                <div class="footer-section">
-                    <h4><i class="fas fa-link"></i> Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
-                        <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
-                        <li><a href="#projects"><i class="fas fa-briefcase"></i> Projects</a></li>
-                        <li><a href="#skills"><i class="fas fa-cogs"></i> Skills</a></li>
-                        <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h4><i class="fas fa-shield-alt"></i> Services</h4>
-                    <ul class="footer-links">
-                        <li><i class="fas fa-lock"></i> Cybersecurity Consulting</li>
-                        <li><i class="fas fa-code"></i> Web Development</li>
-                        <li><i class="fas fa-search"></i> Penetration Testing</li>
-                        <li><i class="fas fa-clipboard-check"></i> Security Auditing</li>
-                        <li><i class="fas fa-desktop"></i> Frontend Development</li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <div class="footer-connect">
-                        <a href="tel:+254114945842" class="social-link phone" title="Call Me">
-                            <img src="images/icons/phone.svg" alt="Phone" class="real-contact-icon">
-                        </a>
-                        <a href="https://wa.me/254114945842" target="_blank" rel="noopener" class="social-link whatsapp" title="WhatsApp">
-                            <img src="images/icons/whatsapp.svg" alt="WhatsApp" class="real-contact-icon">
-                        </a>
-                        <a href="mailto:musamwange2@gmail.com" class="social-link email" title="Email">
-                            <img src="images/icons/email.svg" alt="Email" class="real-contact-icon">
-                        </a>
-                        <a href="https://linkedin.com/in/musamwange" target="_blank" rel="noopener" class="social-link linkedin" title="LinkedIn">
-                            <img src="images/icons/linkedin.svg" alt="LinkedIn" class="real-contact-icon">
-                        </a>
+                                  </div>
+                                </section>
                         <a href="https://github.com/MusaMuthami1" target="_blank" rel="noopener" class="social-link github" title="GitHub">
                             <img src="images/icons/github.svg" alt="GitHub" class="real-contact-icon">
                         </a>
