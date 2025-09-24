@@ -2,7 +2,7 @@
 .modern-contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 24px 32px;
+    gap: 14px 24px;
     margin-bottom: 24px;
 }
 .modern-contact-grid .form-group {
@@ -16,7 +16,7 @@
 @media (max-width: 800px) {
     .modern-contact-grid {
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 12px;
     }
     .modern-contact-grid .form-group.full-width {
         grid-column: 1 / span 1;
@@ -1569,13 +1569,18 @@ h1 {
 .form-group select,
 .form-group textarea {
     width: 100%;
-    padding: 1rem 1.5rem;
+    border: 1px solid #e5e7eb;
     border: 2px solid rgba(0, 163, 255, 0.1);
-    border-radius: 12px;
+    margin-bottom: 6px;
     font-size: 1rem;
     background: rgba(255, 255, 255, 0.8);
     transition: all 0.3s ease;
     font-family: 'Poppins', sans-serif;
+/* Add location icon to location dropdown */
+    background-image: url('images/icons/location.svg');
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    padding-left: 2.2rem;
 }
 
 .form-group input:focus,
