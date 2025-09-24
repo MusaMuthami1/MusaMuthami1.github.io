@@ -1,3 +1,62 @@
+/* --- Contact Info Bar (UI/UX) --- */
+.contact-flex-row {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    gap: 2.5rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+.contact-info-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.2rem;
+    background: rgba(37,99,235,0.10);
+    border-radius: 16px;
+    padding: 2.2rem 0.7rem;
+    min-width: 60px;
+    box-shadow: 0 2px 16px rgba(37,99,235,0.08);
+    margin-top: 0.5rem;
+}
+.contact-info-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #2563eb 60%, #60a5fa 100%);
+    box-shadow: 0 2px 8px rgba(37,99,235,0.13);
+    transition: background 0.18s, box-shadow 0.18s, transform 0.18s;
+}
+.contact-info-icon:hover {
+    background: linear-gradient(135deg, #60a5fa 0%, #2563eb 100%);
+    box-shadow: 0 4px 16px rgba(37,99,235,0.18);
+    transform: scale(1.08);
+}
+.contact-info-icon img {
+    width: 22px;
+    height: 22px;
+}
+@media (max-width: 900px) {
+    .contact-flex-row {
+        flex-direction: column;
+        gap: 1.5rem;
+        max-width: 98vw;
+    }
+    .contact-info-bar {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 0.7rem 0.7rem;
+        min-width: unset;
+        margin-bottom: 1.2rem;
+        margin-top: 0;
+    }
+}
 .contact-card {
     animation: fadeInUp 0.7s cubic-bezier(.4,0,.2,1);
 }
