@@ -396,46 +396,17 @@
                         <div class="honeypot">
                             <input type="text" name="website" id="website" value="">
                         </div>
-                        
-                        <div class="form-grid">
+                        <div class="form-grid modern-contact-grid">
                             <div class="form-group">
-                                <label for="fullName">
-                                    <i class="fas fa-user"></i> Full Name *
-                                </label>
-                                <input 
-                                    type="text" 
-                                    id="fullName" 
-                                    name="fullName" 
-                                    placeholder="Full Name" 
-                                    required 
-                                    minlength="2" 
-                                    maxlength="50"
-                                    pattern="[A-Za-z\s]+"
-                                    autocomplete="name"
-                                >
-                                <span class="form-line"></span>
+                                <label for="fullName"><i class="fas fa-user"></i> Full Name *</label>
+                                <input type="text" id="fullName" name="fullName" placeholder="Full Name" required minlength="2" maxlength="50" pattern="[A-Za-z\s]+" autocomplete="name">
                             </div>
-                            
                             <div class="form-group">
-                                <label for="emailAddress">
-                                    <i class="fas fa-envelope"></i> Email Address *
-                                </label>
-                                <input 
-                                    type="email" 
-                                    id="emailAddress" 
-                                    name="emailAddress" 
-                                    placeholder="Email Address" 
-                                    required 
-                                    maxlength="100"
-                                    autocomplete="email"
-                                >
-                                <span class="form-line"></span>
+                                <label for="emailAddress"><i class="fas fa-envelope"></i> Email Address *</label>
+                                <input type="email" id="emailAddress" name="emailAddress" placeholder="Email Address" required maxlength="100" autocomplete="email">
                             </div>
-                            
                             <div class="form-group">
-                                <label for="phoneNumber">
-                                    <i class="fas fa-phone"></i> Phone Number
-                                </label>
+                                <label for="phoneNumber"><i class="fas fa-phone"></i> Phone Number</label>
                                 <div class="phone-input-container">
                                     <div class="custom-dropdown" id="countryDropdown">
                                         <div class="dropdown-selected" data-placeholder="Select Country">
@@ -452,267 +423,51 @@
                                                 <div class="dropdown-option" data-value="+49"><img src="images/flags/de.svg" alt="Germany" class="flag-icon"> Germany (+49)</div>
                                                 <div class="dropdown-option" data-value="+91"><img src="images/flags/in.svg" alt="India" class="flag-icon"> India (+91)</div>
                                                 <div class="dropdown-option selected" data-value="+254"><img src="images/flags/ke.svg" alt="Kenya" class="flag-icon"> Kenya (+254)</div>
-                                                <!-- ...other countries, fallback to emoji or add more SVGs as needed... -->
                                             </div>
                                         </div>
                                     </div>
                                     <input type="hidden" id="countryCode" name="countryCode" value="+254">
-                                    <input 
-                                        type="tel" 
-                                        id="phoneNumber" 
-                                        name="phoneNumber" 
-                                        placeholder="123 456 789" 
-                                        maxlength="15"
-                                        pattern="[0-9\s\-]+"
-                                        autocomplete="tel"
-                                    >
+                                    <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="123 456 789" maxlength="15" pattern="[0-9\s\-]+" autocomplete="tel">
                                 </div>
-                                <span class="form-line"></span>
                             </div>
-                            
                             <div class="form-group">
-                                <label for="location">
-                                    <i class="fas fa-map-marker-alt"></i> Location
-                                </label>
+                                <label for="location"><i class="fas fa-map-marker-alt"></i> Location</label>
                                 <select id="location" name="location" class="location-select">
                                     <option value="">Select Your Location</option>
-                                    <option value="Abuja, Nigeria">Abuja, Nigeria</option>
-                                    <option value="Abu Dhabi, UAE">Abu Dhabi, UAE</option>
-                                    <option value="Accra, Ghana">Accra, Ghana</option>
-                                    <option value="Adelaide, Australia">Adelaide, Australia</option>
-                                    <option value="Addis Ababa, Ethiopia">Addis Ababa, Ethiopia</option>
-                                    <option value="Algiers, Algeria">Algiers, Algeria</option>
-                                    <option value="Almaty, Kazakhstan">Almaty, Kazakhstan</option>
-                                    <option value="Amsterdam, Netherlands">Amsterdam, Netherlands</option>
-                                    <option value="Ankara, Turkey">Ankara, Turkey</option>
-                                    <option value="Antwerp, Belgium">Antwerp, Belgium</option>
-                                    <option value="Arequipa, Peru">Arequipa, Peru</option>
-                                    <option value="Asunción, Paraguay">Asunción, Paraguay</option>
-                                    <option value="Athens, Greece">Athens, Greece</option>
-                                    <option value="Atlanta, USA">Atlanta, USA</option>
-                                    <option value="Auckland, New Zealand">Auckland, New Zealand</option>
-                                    <option value="Austin, USA">Austin, USA</option>
-                                    <option value="Bangkok, Thailand">Bangkok, Thailand</option>
-                                    <option value="Barcelona, Spain">Barcelona, Spain</option>
-                                    <option value="Beijing, China">Beijing, China</option>
-                                    <option value="Bergen, Norway">Bergen, Norway</option>
-                                    <option value="Berlin, Germany">Berlin, Germany</option>
-                                    <option value="Birmingham, UK">Birmingham, UK</option>
-                                    <option value="Bogotá, Colombia">Bogotá, Colombia</option>
-                                    <option value="Boston, USA">Boston, USA</option>
-                                    <option value="Brasília, Brazil">Brasília, Brazil</option>
-                                    <option value="Brisbane, Australia">Brisbane, Australia</option>
-                                    <option value="Brussels, Belgium">Brussels, Belgium</option>
-                                    <option value="Bucharest, Romania">Bucharest, Romania</option>
-                                    <option value="Budapest, Hungary">Budapest, Hungary</option>
-                                    <option value="Buenos Aires, Argentina">Buenos Aires, Argentina</option>
-                                    <option value="Busan, South Korea">Busan, South Korea</option>
-                                    <option value="Cairo, Egypt">Cairo, Egypt</option>
-                                    <option value="Calgary, Canada">Calgary, Canada</option>
-                                    <option value="Cali, Colombia">Cali, Colombia</option>
-                                    <option value="Canberra, Australia">Canberra, Australia</option>
-                                    <option value="Cape Town, South Africa">Cape Town, South Africa</option>
-                                    <option value="Caracas, Venezuela">Caracas, Venezuela</option>
-                                    <option value="Casablanca, Morocco">Casablanca, Morocco</option>
-                                    <option value="Cebu, Philippines">Cebu, Philippines</option>
-                                    <option value="Chennai, India">Chennai, India</option>
-                                    <option value="Chiang Mai, Thailand">Chiang Mai, Thailand</option>
-                                    <option value="Chicago, USA">Chicago, USA</option>
-                                    <option value="Christchurch, New Zealand">Christchurch, New Zealand</option>
-                                    <option value="Copenhagen, Denmark">Copenhagen, Denmark</option>
-                                    <option value="Cork, Ireland">Cork, Ireland</option>
-                                    <option value="Córdoba, Argentina">Córdoba, Argentina</option>
-                                    <option value="Dallas, USA">Dallas, USA</option>
-                                    <option value="Dar es Salaam, Tanzania">Dar es Salaam, Tanzania</option>
-                                    <option value="Delhi, India">Delhi, India</option>
-                                    <option value="Denver, USA">Denver, USA</option>
-                                    <option value="Dodoma, Tanzania">Dodoma, Tanzania</option>
-                                    <option value="Doha, Qatar">Doha, Qatar</option>
-                                    <option value="Dubai, UAE">Dubai, UAE</option>
-                                    <option value="Dublin, Ireland">Dublin, Ireland</option>
-                                    <option value="Durban, South Africa">Durban, South Africa</option>
-                                    <option value="Edinburgh, UK">Edinburgh, UK</option>
-                                    <option value="Edmonton, Canada">Edmonton, Canada</option>
-                                    <option value="Eldoret, Kenya">Eldoret, Kenya</option>
-                                    <option value="Fortaleza, Brazil">Fortaleza, Brazil</option>
-                                    <option value="Frankfurt, Germany">Frankfurt, Germany</option>
-                                    <option value="Gaborone, Botswana">Gaborone, Botswana</option>
-                                    <option value="Geneva, Switzerland">Geneva, Switzerland</option>
-                                    <option value="Glasgow, UK">Glasgow, UK</option>
-                                    <option value="Gold Coast, Australia">Gold Coast, Australia</option>
-                                    <option value="Gothenburg, Sweden">Gothenburg, Sweden</option>
-                                    <option value="Guadalajara, Mexico">Guadalajara, Mexico</option>
-                                    <option value="Guangzhou, China">Guangzhou, China</option>
-                                    <option value="Guayaquil, Ecuador">Guayaquil, Ecuador</option>
-                                    <option value="Hamburg, Germany">Hamburg, Germany</option>
-                                    <option value="Hamilton, New Zealand">Hamilton, New Zealand</option>
-                                    <option value="Hanoi, Vietnam">Hanoi, Vietnam</option>
-                                    <option value="Harare, Zimbabwe">Harare, Zimbabwe</option>
-                                    <option value="Helsinki, Finland">Helsinki, Finland</option>
-                                    <option value="Ho Chi Minh City, Vietnam">Ho Chi Minh City, Vietnam</option>
-                                    <option value="Hong Kong">Hong Kong</option>
-                                    <option value="Houston, USA">Houston, USA</option>
-                                    <option value="Hyderabad, India">Hyderabad, India</option>
-                                    <option value="Istanbul, Turkey">Istanbul, Turkey</option>
-                                    <option value="Jakarta, Indonesia">Jakarta, Indonesia</option>
-                                    <option value="Jeddah, Saudi Arabia">Jeddah, Saudi Arabia</option>
-                                    <option value="Jerusalem, Israel">Jerusalem, Israel</option>
-                                    <option value="Johannesburg, South Africa">Johannesburg, South Africa</option>
-                                    <option value="Kampala, Uganda">Kampala, Uganda</option>
-                                    <option value="Kano, Nigeria">Kano, Nigeria</option>
-                                    <option value="Kiev, Ukraine">Kiev, Ukraine</option>
-                                    <option value="Kigali, Rwanda">Kigali, Rwanda</option>
-                                    <option value="Kisumu, Kenya">Kisumu, Kenya</option>
-                                    <option value="Kolkata, India">Kolkata, India</option>
-                                    <option value="Krakow, Poland">Krakow, Poland</option>
-                                    <option value="Kuala Lumpur, Malaysia">Kuala Lumpur, Malaysia</option>
-                                    <option value="Kumasi, Ghana">Kumasi, Ghana</option>
-                                    <option value="Kuwait City, Kuwait">Kuwait City, Kuwait</option>
-                                    <option value="Kyoto, Japan">Kyoto, Japan</option>
-                                    <option value="La Paz, Bolivia">La Paz, Bolivia</option>
-                                    <option value="Lagos, Nigeria">Lagos, Nigeria</option>
-                                    <option value="Las Vegas, USA">Las Vegas, USA</option>
-                                    <option value="Lima, Peru">Lima, Peru</option>
-                                    <option value="Lisbon, Portugal">Lisbon, Portugal</option>
-                                    <option value="London, UK">London, UK</option>
-                                    <option value="Los Angeles, USA">Los Angeles, USA</option>
-                                    <option value="Lusaka, Zambia">Lusaka, Zambia</option>
-                                    <option value="Lyon, France">Lyon, France</option>
-                                    <option value="Madrid, Spain">Madrid, Spain</option>
-                                    <option value="Manama, Bahrain">Manama, Bahrain</option>
-                                    <option value="Manchester, UK">Manchester, UK</option>
-                                    <option value="Manila, Philippines">Manila, Philippines</option>
-                                    <option value="Maputo, Mozambique">Maputo, Mozambique</option>
-                                    <option value="Maracaibo, Venezuela">Maracaibo, Venezuela</option>
-                                    <option value="Marseille, France">Marseille, France</option>
-                                    <option value="Medellín, Colombia">Medellín, Colombia</option>
-                                    <option value="Melbourne, Australia">Melbourne, Australia</option>
-                                    <option value="Mexico City, Mexico">Mexico City, Mexico</option>
-                                    <option value="Miami, USA">Miami, USA</option>
-                                    <option value="Milan, Italy">Milan, Italy</option>
-                                    <option value="Minsk, Belarus">Minsk, Belarus</option>
-                                    <option value="Mombasa, Kenya">Mombasa, Kenya</option>
-                                    <option value="Monterrey, Mexico">Monterrey, Mexico</option>
-                                    <option value="Montreal, Canada">Montreal, Canada</option>
-                                    <option value="Montevideo, Uruguay">Montevideo, Uruguay</option>
-                                    <option value="Moscow, Russia">Moscow, Russia</option>
-                                    <option value="Mumbai, India">Mumbai, India</option>
-                                    <option value="Munich, Germany">Munich, Germany</option>
                                     <option value="Nairobi, Kenya">Nairobi, Kenya</option>
-                                    <option value="Nakuru, Kenya">Nakuru, Kenya</option>
-                                    <option value="Naples, Italy">Naples, Italy</option>
-                                    <option value="Newcastle, Australia">Newcastle, Australia</option>
+                                    <option value="Lagos, Nigeria">Lagos, Nigeria</option>
+                                    <option value="London, UK">London, UK</option>
                                     <option value="New York, USA">New York, USA</option>
-                                    <option value="Osaka, Japan">Osaka, Japan</option>
-                                    <option value="Oslo, Norway">Oslo, Norway</option>
-                                    <option value="Ottawa, Canada">Ottawa, Canada</option>
-                                    <option value="Paris, France">Paris, France</option>
-                                    <option value="Perth, Australia">Perth, Australia</option>
-                                    <option value="Philadelphia, USA">Philadelphia, USA</option>
-                                    <option value="Phoenix, USA">Phoenix, USA</option>
-                                    <option value="Port Moresby, Papua New Guinea">Port Moresby, Papua New Guinea</option>
-                                    <option value="Porto, Portugal">Porto, Portugal</option>
-                                    <option value="Prague, Czech Republic">Prague, Czech Republic</option>
-                                    <option value="Quebec City, Canada">Quebec City, Canada</option>
-                                    <option value="Quito, Ecuador">Quito, Ecuador</option>
-                                    <option value="Rabat, Morocco">Rabat, Morocco</option>
-                                    <option value="Rio de Janeiro, Brazil">Rio de Janeiro, Brazil</option>
-                                    <option value="Riyadh, Saudi Arabia">Riyadh, Saudi Arabia</option>
-                                    <option value="Rome, Italy">Rome, Italy</option>
-                                    <option value="Rosario, Argentina">Rosario, Argentina</option>
-                                    <option value="Rotterdam, Netherlands">Rotterdam, Netherlands</option>
-                                    <option value="Salvador, Brazil">Salvador, Brazil</option>
-                                    <option value="San Antonio, USA">San Antonio, USA</option>
-                                    <option value="San Diego, USA">San Diego, USA</option>
-                                    <option value="San Francisco, USA">San Francisco, USA</option>
-                                    <option value="San Jose, USA">San Jose, USA</option>
-                                    <option value="Santa Cruz, Bolivia">Santa Cruz, Bolivia</option>
-                                    <option value="Santiago, Chile">Santiago, Chile</option>
-                                    <option value="São Paulo, Brazil">São Paulo, Brazil</option>
-                                    <option value="Seattle, USA">Seattle, USA</option>
-                                    <option value="Seoul, South Korea">Seoul, South Korea</option>
-                                    <option value="Shanghai, China">Shanghai, China</option>
-                                    <option value="Shenzhen, China">Shenzhen, China</option>
-                                    <option value="Singapore">Singapore</option>
-                                    <option value="Sofia, Bulgaria">Sofia, Bulgaria</option>
-                                    <option value="St. Petersburg, Russia">St. Petersburg, Russia</option>
-                                    <option value="Stockholm, Sweden">Stockholm, Sweden</option>
-                                    <option value="Surabaya, Indonesia">Surabaya, Indonesia</option>
-                                    <option value="Suva, Fiji">Suva, Fiji</option>
-                                    <option value="Sydney, Australia">Sydney, Australia</option>
-                                    <option value="Tashkent, Uzbekistan">Tashkent, Uzbekistan</option>
-                                    <option value="Tel Aviv, Israel">Tel Aviv, Israel</option>
-                                    <option value="Thessaloniki, Greece">Thessaloniki, Greece</option>
-                                    <option value="Tijuana, Mexico">Tijuana, Mexico</option>
-                                    <option value="Tokyo, Japan">Tokyo, Japan</option>
-                                    <option value="Toronto, Canada">Toronto, Canada</option>
-                                    <option value="Tunis, Tunisia">Tunis, Tunisia</option>
-                                    <option value="Valencia, Spain">Valencia, Spain</option>
-                                    <option value="Valparaíso, Chile">Valparaíso, Chile</option>
-                                    <option value="Vancouver, Canada">Vancouver, Canada</option>
-                                    <option value="Vienna, Austria">Vienna, Austria</option>
-                                    <option value="Warsaw, Poland">Warsaw, Poland</option>
-                                    <option value="Washington DC, USA">Washington DC, USA</option>
-                                    <option value="Wellington, New Zealand">Wellington, New Zealand</option>
-                                    <option value="Windhoek, Namibia">Windhoek, Namibia</option>
-                                    <option value="Winnipeg, Canada">Winnipeg, Canada</option>
-                                    <option value="Zurich, Switzerland">Zurich, Switzerland</option>
                                     <option value="Other">Other (Please specify in message)</option>
                                 </select>
-                                <span class="form-line"></span>
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="expertise"><i class="fas fa-tools"></i> What Expertise You're Interested In</label>
+                                <select id="expertise" name="expertise" required>
+                                    <option value="">Select Service</option>
+                                    <option value="cybersecurity">Cybersecurity Consulting</option>
+                                    <option value="web-development">Web Development</option>
+                                    <option value="penetration-testing">Penetration Testing</option>
+                                    <option value="security-audit">Security Audit</option>
+                                    <option value="frontend-development">Frontend Development</option>
+                                    <option value="fullstack-development">Full-Stack Development</option>
+                                    <option value="consultation">General Consultation</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="projectDetails"><i class="fas fa-comment-dots"></i> Tell Me About Your Project *</label>
+                                <textarea id="projectDetails" name="projectDetails" placeholder="Leave your message here" required minlength="10" maxlength="1000" rows="5"></textarea>
                             </div>
                         </div>
-                        
-                        <div class="form-group full-width">
-                            <label for="expertise">
-                                <i class="fas fa-tools"></i> What Expertise You're Interested In
-                            </label>
-                            <select id="expertise" name="expertise" required>
-                                <option value="">Select Service</option>
-                                <option value="cybersecurity">Cybersecurity Consulting</option>
-                                <option value="web-development">Web Development</option>
-                                <option value="penetration-testing">Penetration Testing</option>
-                                <option value="security-audit">Security Audit</option>
-                                <option value="frontend-development">Frontend Development</option>
-                                <option value="fullstack-development">Full-Stack Development</option>
-                                <option value="consultation">General Consultation</option>
-                                <option value="other">Other</option>
-                            </select>
-                            <span class="form-line"></span>
-                        </div>
-                        
-                        <div class="form-group full-width">
-                            <label for="projectDetails">
-                                <i class="fas fa-comment-dots"></i> Tell Me About Your Project *
-                            </label>
-                            <textarea 
-                                id="projectDetails" 
-                                name="projectDetails" 
-                                placeholder="Leave your message here" 
-                                required 
-                                minlength="10" 
-                                maxlength="1000"
-                                rows="5"
-                            ></textarea>
-                            <span class="form-line"></span>
-                        </div>
-                        
                         <!-- Rate Limiting Protection -->
                         <div class="rate-limit-info">
                             <span id="rate-limit-counter">0</span>
                         </div>
-                        
                         <button type="submit" class="submit-button" id="submitBtn">
-                            <span class="btn-text">
-                                <i class="fas fa-paper-plane"></i>
-                                Submit
-                            </span>
-                            <span class="btn-loading hidden">
-                                <i class="fas fa-spinner fa-spin"></i>
-                                Sending...
-                            </span>
+                            <span class="btn-text"><i class="fas fa-paper-plane"></i> Submit</span>
+                            <span class="btn-loading hidden"><i class="fas fa-spinner fa-spin"></i> Sending...</span>
                         </button>
-                        
                         <div id="formStatus" class="form-status"></div>
                     </form>
                 </div>

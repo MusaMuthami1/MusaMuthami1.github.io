@@ -1,3 +1,27 @@
+/* Modern two-column contact form grid */
+.modern-contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px 32px;
+    margin-bottom: 24px;
+}
+.modern-contact-grid .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+}
+.modern-contact-grid .form-group.full-width {
+    grid-column: 1 / span 2;
+}
+@media (max-width: 800px) {
+    .modern-contact-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .modern-contact-grid .form-group.full-width {
+        grid-column: 1 / span 1;
+    }
+}
 /* Modern minimal footer styles */
 .footer-bottom-content {
     background: var(--footer-bg);
