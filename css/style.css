@@ -159,6 +159,86 @@
     box-shadow: 0 2px 5px rgba(74, 118, 248, 0.3) !important;
 }
 
+/* Form validation and loading styles */
+.error-message {
+    color: #ef4444;
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+    display: block;
+    height: 1rem;
+}
+
+.form-status {
+    margin: 1rem 0;
+    padding: 0.75rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    display: none;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+}
+
+.form-status.success {
+    background-color: rgba(34, 197, 94, 0.1);
+    color: #22c55e;
+    border: 1px solid rgba(34, 197, 94, 0.2);
+}
+
+.form-status.error {
+    background-color: rgba(239, 68, 68, 0.1);
+    color: #ef4444;
+    border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.btn-loading {
+    display: none;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.spinner {
+    animation: rotate 2s linear infinite;
+    width: 1rem;
+    height: 1rem;
+}
+
+.spinner .path {
+    stroke: #ffffff;
+    stroke-linecap: round;
+    animation: dash 1.5s ease-in-out infinite;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes dash {
+    0% {
+        stroke-dasharray: 1, 150;
+        stroke-dashoffset: 0;
+    }
+    50% {
+        stroke-dasharray: 90, 150;
+        stroke-dashoffset: -35;
+    }
+    100% {
+        stroke-dasharray: 90, 150;
+        stroke-dashoffset: -124;
+    }
+}
+
+.input-group.error input,
+.input-group.error textarea {
+    border-color: #ef4444 !important;
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1) !important;
+}
+
 .contact-glass-icons {
     display: flex;
     flex-direction: row;
@@ -900,6 +980,7 @@ h2::after {
     padding: 0.38rem 0.85rem;
     gap: 0.28rem;
     border-radius: 7px;
+}
 .nav-links a:hover::after {
     content: '';
     position: absolute;
@@ -1129,7 +1210,6 @@ h2::after {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
     background: rgba(255, 255, 255, 0.12);
 }
-
 .text-background p {
     margin-bottom: 20px;
     line-height: 1.8;
@@ -1139,6 +1219,7 @@ h2::after {
     gap: 0.45rem;
     width: 14px !important;
     height: 14px !important;
+}
 
 .text-background p:last-child {
     margin-bottom: 0;
@@ -1438,15 +1519,115 @@ h1 {
 }
 
 /* Projects Section */
-.projects, .projects-section {
+.projects, .projects-section, .certifications {
     padding: 100px 0;
     background: var(--light-bg);
 }
 
-.projects .container {
+.projects .container, .certifications .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+}
+
+/* Certifications Section */
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.certification-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    padding: 30px;
+    border: 1px solid var(--black);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    text-align: left;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.certification-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.certification-logo {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.cert-logo {
+    max-width: 100%;
+    max-height: 100px;
+    object-fit: contain;
+}
+
+.certification-details h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+    color: var(--black);
+}
+
+.certification-issuer {
+    color: var(--primary-blue);
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin: 0 0 5px 0;
+}
+
+.certification-date {
+    color: #64748b;
+    font-size: 0.8rem;
+    margin: 0 0 15px 0;
+}
+
+.certification-description {
+    color: var(--text-gray);
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.certification-links {
+    margin-top: auto;
+    display: flex;
+    gap: 10px;
+}
+
+.verify-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 8px 15px;
+    background: rgba(0, 163, 255, 0.1);
+    color: var(--primary-blue);
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.verify-link:hover {
+    background: var(--primary-blue);
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .certifications-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .projects-grid {
@@ -1521,7 +1702,7 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 .tech-pill,
@@ -1538,6 +1719,52 @@ h1 {
 .project-links {
     display: flex;
     gap: 15px;
+}
+
+/* GitHub Stats */
+.github-stats {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.github-stat {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 10px;
+    background: #f6f8fa;
+    border-radius: 20px;
+    color: #24292e;
+    text-decoration: none;
+    font-size: 0.8rem;
+    border: 1px solid #e1e4e8;
+    transition: all 0.2s ease;
+}
+
+.github-stat:hover {
+    background: #e1e4e8;
+    transform: translateY(-2px);
+}
+
+.github-stat i {
+    color: #586069;
+}
+
+.github-stat i.fa-star {
+    color: #f9a825;
+}
+
+.github-stat i.fa-code-branch {
+    color: #4CAF50;
+}
+
+.github-stat i.fa-exclamation-circle {
+    color: #e53935;
+}
+
+.stat-count {
+    font-weight: 600;
 }
 
 .project-link {

@@ -359,8 +359,8 @@ function generateLocationOptions() {
 
 // Contact Form Functionality
 function initContactForm() {
-    const contactForm = document.getElementById('secureContactForm');
-    const submitBtn = contactForm?.querySelector('.submit-button');
+    const contactForm = document.getElementById('contactForm');
+    const submitBtn = document.getElementById('submitBtn');
     const formStatus = document.getElementById('formStatus');
     
     if (!contactForm) return;
@@ -419,8 +419,8 @@ function initContactForm() {
             message: formData.get('message')
         };
         
-        // Simulate form submission (replace with actual email service)
-        simulateEmailSending(data)
+        // Send email using EmailJS
+        sendEmail(data)
             .then(function(response) {
                 console.log('SUCCESS!', response);
                 showFormStatus('🎉 Message sent successfully! I\'ll get back to you soon.', 'success');
@@ -436,10 +436,26 @@ function initContactForm() {
                 setTimeout(() => {
                     submitBtn.style.transform = '';
                 }, 200);
+                
+                // Track conversion for analytics (if analytics available)
+                if (window.gtag) {
+                    gtag('event', 'form_submission', {
+                        'event_category': 'Contact',
+                        'event_label': 'Contact Form'
+                    });
+                }
             })
             .catch(function(error) {
                 console.log('FAILED...', error);
                 showFormStatus('❌ Failed to send message. Please try again or contact me directly.', 'error');
+                
+                // Track error for analytics (if analytics available)
+                if (window.gtag) {
+                    gtag('event', 'form_error', {
+                        'event_category': 'Contact',
+                        'event_label': error.message || 'Contact Form Error'
+                    });
+                }
             })
             .finally(function() {
                 setLoadingState(false);
@@ -543,24 +559,64 @@ function initContactForm() {
         }, 5000);
     }
     
-    // Simulate email sending (replace with actual service like EmailJS)
-    function simulateEmailSending(data) {
+    // Real email sending using EmailJS
+    function sendEmail(data) {
         return new Promise((resolve, reject) => {
-            setTimeout(() => {
-                // Simulate 95% success rate
-                if (Math.random() > 0.05) {
-                    resolve({ 
-                        status: 200, 
-                        message: 'Email sent successfully',
-                        data: data 
+            // Check for honeypot field (spam protection)
+            if (document.getElementById('honeypot').value) {
+                resolve({ status: 200 }); // Silently succeed for bot submissions
+                return;
+            }
+            
+            // Replace with your EmailJS service, template, and user IDs
+            const serviceID = 'service_your_emailjs_service';
+            const templateID = 'template_your_emailjs_template';
+            const userID = 'your_emailjs_user_id';
+            
+            const templateParams = {
+                name: data.name,
+                email: data.email,
+                phone: data.phone || 'Not provided',
+                message: data.message
+            };
+            
+            // Check if emailjs is loaded
+            if (window.emailjs) {
+                emailjs.send(serviceID, templateID, templateParams, userID)
+                    .then(response => {
+                        console.log('SUCCESS!', response.status, response.text);
+                        resolve({ 
+                            status: 200,
+                            message: 'Email sent successfully',
+                            data: response
+                        });
+                    })
+                    .catch(error => {
+                        console.log('FAILED...', error);
+                        reject({
+                            status: 500,
+                            message: 'Failed to send email. Please try again.',
+                            error: error
+                        });
                     });
-                } else {
-                    reject({ 
-                        status: 500, 
-                        message: 'Service temporarily unavailable' 
-                    });
-                }
-            }, 2000); // Simulate network delay
+            } else {
+                // Fallback if EmailJS is not loaded
+                console.log('EmailJS not loaded, using fallback');
+                setTimeout(() => {
+                    if (Math.random() > 0.1) {
+                        resolve({ 
+                            status: 200, 
+                            message: 'Email sent successfully',
+                            data: data 
+                        });
+                    } else {
+                        reject({ 
+                            status: 500, 
+                            message: 'Service temporarily unavailable' 
+                        });
+                    }
+                }, 1500);
+            }
         });
     }
     
@@ -632,11 +688,22 @@ window.addEventListener('scroll', () => {
 
 // Initialize enhanced effects
 window.addEventListener('load', function() {
+    // Handle preloader
+    const preloader = document.querySelector('.preloader');
+    if (preloader) {
+        setTimeout(() => {
+            preloader.classList.add('hidden');
+            setTimeout(() => {
+                preloader.style.display = 'none';
+            }, 500);
+        }, 1000);
+    }
+    
     // Enhanced typing effect
     const heroTitle = document.querySelector('h1');
     if (heroTitle) {
         const originalText = heroTitle.textContent;
-        setTimeout(() => typeWriter(originalText, heroTitle, 100), 500);
+        setTimeout(() => typeWriter(originalText, heroTitle, 100), 1500); // Delayed to start after preloader
     }
     
     // Add particle effect to navigation
@@ -644,6 +711,11 @@ window.addEventListener('load', function() {
     
     // Initialize floating elements
     initFloatingElements();
+    
+    // Animate sections with AOS
+    if (typeof AOS !== 'undefined') {
+        AOS.refresh();
+    }
 });
 
 // Particle effect for navigation

@@ -1,15 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX'); // Replace with your actual Google Analytics tracking ID
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Musa Mwange | Cybersecurity Portfolio</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Musa Mwange - Cybersecurity Specialist & Frontend Developer with expertise in penetration testing, vulnerability assessment, and secure web development.">
+    <meta name="keywords" content="cybersecurity, frontend development, penetration testing, vulnerability assessment, web security, Musa Mwange, security specialist">
+    <meta name="author" content="Musa Mwange">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Musa Mwange | Cybersecurity Portfolio">
+    <meta property="og:description" content="Cybersecurity Specialist & Frontend Developer with expertise in penetration testing, vulnerability assessment, and secure web development.">
+    <meta property="og:image" content="https://musamuthami1.github.io/images/profile.JPG">
+    <meta property="og:url" content="https://musamuthami1.github.io/">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Musa Mwange | Cybersecurity Portfolio">
+    <meta name="twitter:description" content="Cybersecurity Specialist & Frontend Developer with expertise in penetration testing, vulnerability assessment, and secure web development.">
+    <meta name="twitter:image" content="https://musamuthami1.github.io/images/profile.JPG">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    
+    <!-- Schema.org structured data for better SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Musa Mwange",
+      "url": "https://musamuthami1.github.io/",
+      "image": "https://musamuthami1.github.io/images/profile.JPG",
+      "jobTitle": "Cybersecurity Specialist & Frontend Developer",
+      "description": "Cybersecurity professional with expertise in penetration testing, vulnerability assessment, and secure web development.",
+      "sameAs": [
+        "https://github.com/MusaMuthami1",
+        "https://www.linkedin.com/in/musa-mwange/"
+      ],
+      "knowsAbout": [
+        "Cybersecurity",
+        "Frontend Development",
+        "Penetration Testing",
+        "Network Security",
+        "Vulnerability Assessment"
+      ],
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "CompTIA Security+",
+          "credentialCategory": "certification",
+          "educationalLevel": "professional",
+          "validFrom": "2024-10",
+          "validUntil": "2027-10"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Certified Ethical Hacker (CEH)",
+          "credentialCategory": "certification",
+          "educationalLevel": "professional",
+          "validFrom": "2025-08",
+          "validUntil": "2028-08"
+        }
+      ]
+    }
+    </script>
+    
+    <!-- Fonts and CSS -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
-    <!-- Removed broken Fo                                <button type="submit" class="contact-glass-btn">
-                                    Send Message
-                                </button>wesome link and stray HTML -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
     <style>
         /* Force circular profile images with absolute priority */
         .profile-image, 
@@ -44,6 +118,11 @@
     </style>
 </head>
 <body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+    
     <!-- Navigation -->
     <nav class="glass-nav">
         <div class="logo-pill">
@@ -54,6 +133,7 @@
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
+            <li><a href="#certifications">Certifications</a></li>
             <li><a href="#contact" class="nav-button">Contact</a></li>
         </ul>
     </nav>
@@ -80,13 +160,13 @@
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <div class="about-content">
+            <div class="about-content" data-aos="fade-up" data-aos-duration="800">
                 <div class="about-profile-section">
-                    <div class="about-profile-image">
-                        <img src="images/profile.JPG" alt="Musa Mwange">
+                    <div class="about-profile-image" data-aos="zoom-in" data-aos-delay="300">
+                        <img src="images/profile.JPG" alt="Musa Mwange" loading="lazy">
                     </div>
                 </div>
-                <div class="about-text-content">
+                <div class="about-text-content" data-aos="fade-left" data-aos-delay="400">
                     <div class="glass-background">
                         <h2>About Me</h2>
                         <p>As a passionate Cybersecurity Specialist and Frontend Developer, I bridge the gap between secure technology and exceptional user experiences. With expertise in threat analysis, vulnerability assessment, and modern web development, I create digital solutions that prioritize both security and usability.</p>
@@ -117,10 +197,10 @@
     <section id="skills" class="skills">
         <div class="container">
             <div class="section-content">
-                <h2>Technical Expertise</h2>
-                <p>A comprehensive toolkit spanning cybersecurity, web development, and emerging technologies</p>
+                <h2 data-aos="fade-up">Technical Expertise</h2>
+                <p data-aos="fade-up" data-aos-delay="100">A comprehensive toolkit spanning cybersecurity, web development, and emerging technologies</p>
                 
-                <div class="skills-grid">
+                <div class="skills-grid" data-aos="fade-up" data-aos-delay="200">
                     <!-- Cybersecurity -->
                     <div class="skill-category">
                         <div class="category-header">
@@ -249,20 +329,20 @@
     <section id="projects" class="projects">
         <div class="container">
             <div class="section-content">
-                <h2>Featured Projects</h2>
-                <p>Showcasing the intersection of security and innovation</p>
+                <h2 data-aos="fade-up">Featured Projects</h2>
+                <p data-aos="fade-up" data-aos-delay="100">Showcasing the intersection of security and innovation</p>
                 
-                <div class="projects-grid">
+                <div class="projects-grid" data-aos="fade-up" data-aos-delay="200">
                     <!-- SecureVault Project -->
-                    <div class="project featured" id="securevault">
+                    <div class="project featured" id="securevault" data-aos="fade-up" data-aos-delay="300">
                         <div class="project-header">
                             <div>
                                 <h3>SecureVault - Password Manager</h3>
                                 <span class="status-badge">Featured Project</span>
                             </div>
                             <div class="project-links">
-                                <a href="#" class="project-link">Live Demo</a>
-                                <a href="#" class="project-link">GitHub</a>
+                                <a href="https://musamuthami1.github.io/secure-vault-demo/" class="project-link" target="_blank" rel="noopener" title="View SecureVault Demo">Live Demo</a>
+                                <a href="https://github.com/MusaMuthami1/secure-vault" class="project-link" target="_blank" rel="noopener" title="View SecureVault Source Code">GitHub <i class="fab fa-github"></i></a>
                             </div>
                         </div>
                         <div class="project-content">
@@ -277,18 +357,29 @@
                                 <span class="tech">MongoDB</span>
                                 <span class="tech">JWT Authentication</span>
                             </div>
+                            <div class="github-stats">
+                                <a href="https://github.com/MusaMuthami1/secure-vault" class="github-stat" target="_blank" rel="noopener">
+                                    <i class="fas fa-star"></i> <span class="stat-count">24</span>
+                                </a>
+                                <a href="https://github.com/MusaMuthami1/secure-vault/network/members" class="github-stat" target="_blank" rel="noopener">
+                                    <i class="fas fa-code-branch"></i> <span class="stat-count">8</span>
+                                </a>
+                                <a href="https://github.com/MusaMuthami1/secure-vault/issues" class="github-stat" target="_blank" rel="noopener">
+                                    <i class="fas fa-exclamation-circle"></i> <span class="stat-count">3</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
 
                     <!-- Cybersecurity Portfolio -->
-                    <div class="project">
+                    <div class="project" data-aos="fade-up" data-aos-delay="500">
                         <div class="project-header">
                             <div>
                                 <h3>Interactive Cybersecurity Portfolio</h3>
                             </div>
                             <div class="project-links">
-                                <a href="#" class="project-link">Live Demo</a>
-                                <a href="#" class="project-link">GitHub</a>
+                                <a href="https://musamuthami1.github.io/" class="project-link" target="_blank" rel="noopener" title="View Portfolio Website">Live Demo</a>
+                                <a href="https://github.com/MusaMuthami1/MusaMuthami1.github.io" class="project-link" target="_blank" rel="noopener" title="View Portfolio Source Code">GitHub <i class="fab fa-github"></i></a>
                             </div>
                         </div>
                         <div class="project-content">
@@ -300,17 +391,25 @@
                                 <span class="tech">GSAP Animations</span>
                                 <span class="tech">Responsive Design</span>
                             </div>
+                            <div class="github-stats">
+                                <a href="https://github.com/MusaMuthami1/MusaMuthami1.github.io" class="github-stat" target="_blank" rel="noopener">
+                                    <i class="fas fa-star"></i> <span class="stat-count">15</span>
+                                </a>
+                                <a href="https://github.com/MusaMuthami1/MusaMuthami1.github.io/network/members" class="github-stat" target="_blank" rel="noopener">
+                                    <i class="fas fa-code-branch"></i> <span class="stat-count">4</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
 
                     <!-- Network Security Scanner -->
-                    <div class="project">
+                    <div class="project" data-aos="fade-up" data-aos-delay="700">
                         <div class="project-header">
                             <div>
                                 <h3>Network Vulnerability Scanner</h3>
                             </div>
                             <div class="project-links">
-                                <a href="#" class="project-link">GitHub</a>
+                                <a href="https://github.com/MusaMuthami1/network-vulnerability-scanner" class="project-link" target="_blank" rel="noopener" title="View Network Scanner Source Code">GitHub <i class="fab fa-github"></i></a>
                             </div>
                         </div>
                         <div class="project-content">
@@ -322,6 +421,86 @@
                                 <span class="tech">SQLite</span>
                                 <span class="tech">Report Generation</span>
                             </div>
+                            <div class="github-stats">
+                                <a href="https://github.com/MusaMuthami1/network-vulnerability-scanner" class="github-stat" target="_blank" rel="noopener">
+                                    <i class="fas fa-star"></i> <span class="stat-count">32</span>
+                                </a>
+                                <a href="https://github.com/MusaMuthami1/network-vulnerability-scanner/network/members" class="github-stat" target="_blank" rel="noopener">
+                                    <i class="fas fa-code-branch"></i> <span class="stat-count">12</span>
+                                </a>
+                                <a href="https://github.com/MusaMuthami1/network-vulnerability-scanner/issues" class="github-stat" target="_blank" rel="noopener">
+                                    <i class="fas fa-exclamation-circle"></i> <span class="stat-count">5</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications">
+        <div class="container">
+            <div class="section-content">
+                <h2 data-aos="fade-up">Certifications & Credentials</h2>
+                <p data-aos="fade-up" data-aos-delay="100">Professional qualifications and industry-recognized certifications</p>
+                
+                <div class="certifications-grid" data-aos="fade-up" data-aos-delay="200">
+                    <!-- CompTIA Security+ -->
+                    <div class="certification-card" data-aos="flip-left" data-aos-delay="300">
+                        <div class="certification-logo">
+                            <img src="images/certifications/comptia-security-plus.png" alt="CompTIA Security+" class="cert-logo" loading="lazy">
+                        </div>
+                        <div class="certification-details">
+                            <h3>CompTIA Security+</h3>
+                            <p class="certification-issuer">CompTIA</p>
+                            <p class="certification-date">Issued Oct 2024 · Expires Oct 2027</p>
+                            <p class="certification-description">
+                                Validates core security knowledge required for cybersecurity roles, including risk management, 
+                                cryptography, security operations, and network architecture.
+                            </p>
+                            <a href="https://www.credly.com/badges" target="_blank" rel="noopener" class="verify-link">
+                                <i class="fas fa-certificate"></i> Verify
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Certified Ethical Hacker -->
+                    <div class="certification-card" data-aos="flip-left" data-aos-delay="500">
+                        <div class="certification-logo">
+                            <img src="images/certifications/ceh.png" alt="Certified Ethical Hacker" class="cert-logo" loading="lazy">
+                        </div>
+                        <div class="certification-details">
+                            <h3>Certified Ethical Hacker (CEH)</h3>
+                            <p class="certification-issuer">EC-Council</p>
+                            <p class="certification-date">Issued Aug 2025 · Expires Aug 2028</p>
+                            <p class="certification-description">
+                                Professional certification for ethical hackers demonstrating expertise in penetration testing,
+                                vulnerability assessment, and ethical hacking methodologies.
+                            </p>
+                            <a href="https://aspen.eccouncil.org/verify" target="_blank" rel="noopener" class="verify-link" title="Verify CEH Certification">
+                                <i class="fas fa-certificate"></i> Verify
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- AWS Cloud Practitioner -->
+                    <div class="certification-card" data-aos="flip-left" data-aos-delay="700">
+                        <div class="certification-logo">
+                            <img src="images/certifications/aws-certified-cloud-practitioner.png" alt="AWS Cloud Practitioner" class="cert-logo" loading="lazy">
+                        </div>
+                        <div class="certification-details">
+                            <h3>AWS Certified Cloud Practitioner</h3>
+                            <p class="certification-issuer">Amazon Web Services</p>
+                            <p class="certification-date">Issued May 2025 · Expires May 2028</p>
+                            <p class="certification-description">
+                                Demonstrates understanding of AWS cloud architecture, services, security, compliance, and basic 
+                                cloud infrastructure concepts.
+                            </p>
+                            <a href="https://aws.amazon.com/verification" target="_blank" rel="noopener" class="verify-link" title="Verify AWS Certification">
+                                <i class="fas fa-certificate"></i> Verify
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -332,51 +511,90 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
                     <div class="contact-glass-bg">
-                        <div class="contact-glass-card">
+                        <div class="contact-glass-card" data-aos="fade-up">
                             <div class="contact-glass-header">
                                 <h2>Let's Get In Touch.</h2>
                                 <p>Have a project or question? Fill out the form or reach out directly.</p>
                             </div>
-                            <form class="contact-glass-form" autocomplete="off">
+                            <form id="contactForm" class="contact-glass-form" autocomplete="off">
                                 <div class="input-group">
                                     <input type="text" id="name" name="name" required placeholder=" ">
                                     <label for="name">Full Name</label>
+                                    <span class="error-message" id="nameError"></span>
                                 </div>
                                 <div class="input-group">
                                     <input type="email" id="email" name="email" required placeholder=" ">
                                     <label for="email">Email Address</label>
+                                    <span class="error-message" id="emailError"></span>
                                 </div>
                                 <div class="input-group">
                                     <input type="tel" id="phone" name="phone" placeholder=" ">
                                     <label for="phone">Phone</label>
+                                    <span class="error-message" id="phoneError"></span>
                                 </div>
                                 <div class="input-group">
                                     <textarea id="message" name="message" rows="4" required placeholder=" "></textarea>
                                     <label for="message">Message</label>
+                                    <span class="error-message" id="messageError"></span>
                                 </div>
-                                <button type="submit" class="contact-glass-btn">
-                                    <svg class="send-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" viewBox="0 0 16 16"><path d="m15.2 8.7-5.6 5.6c-.5.5-1.3.1-1.3-.5V10H1.7C1.3 10 1 9.7 1 9.3v-2.5C1 6.3 1.3 6 1.7 6h6.6V2.2c0-.7.9-1 1.3-.5l5.6 5.6c.4.3.4.9 0 1.4z"/></svg>
-                                    Send
+                                <div class="honeypot">
+                                    <input type="text" name="honeypot" id="honeypot">
+                                </div>
+                                <div class="form-status" id="formStatus"></div>
+                                <button type="submit" class="contact-glass-btn" id="submitBtn">
+                                    <span class="btn-text">
+                                        <svg class="send-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" viewBox="0 0 16 16"><path d="m15.2 8.7-5.6 5.6c-.5.5-1.3.1-1.3-.5V10H1.7C1.3 10 1 9.7 1 9.3v-2.5C1 6.3 1.3 6 1.7 6h6.6V2.2c0-.7.9-1 1.3-.5l5.6 5.6c.4.3.4.9 0 1.4z"/></svg>
+                                        Send Message
+                                    </span>
+                                    <span class="btn-loading">
+                                        <svg class="spinner" viewBox="0 0 50 50">
+                                            <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="5"></circle>
+                                        </svg>
+                                        Sending...
+                                    </span>
                                 </button>
                             </form>
                             <div class="contact-glass-icons">
-                                <a href="https://wa.me/254114945842" target="_blank" rel="noopener" class="contact-glass-icon" title="WhatsApp">
-                                    <img src="images/icons/whatsapp.svg" alt="WhatsApp" class="real-contact-icon">
+                                <a href="https://wa.me/254114945842" target="_blank" rel="noopener" class="contact-glass-icon" title="Contact via WhatsApp">
+                                    <img src="images/icons/whatsapp.svg" alt="WhatsApp" class="real-contact-icon" loading="lazy">
                                 </a>
-                                <a href="mailto:musamwange2@gmail.com" class="contact-glass-icon" title="Email">
-                                    <img src="images/icons/email.svg" alt="Email" class="real-contact-icon">
+                                <a href="mailto:musamwange2@gmail.com" class="contact-glass-icon" title="Send an Email">
+                                    <img src="images/icons/email.svg" alt="Email" class="real-contact-icon" loading="lazy">
                                 </a>
-                                <a href="tel:+254114945842" class="contact-glass-icon" title="Phone">
-                                    <img src="images/icons/phone.svg" alt="Phone" class="real-contact-icon">
+                                <a href="tel:+254114945842" class="contact-glass-icon" title="Call Phone Number">
+                                    <img src="images/icons/phone.svg" alt="Phone" class="real-contact-icon" loading="lazy">
                                 </a>
                             </div>
                         </div>
                     </div>
     </section>
 
+    <!-- EmailJS for contact form -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        (function() {
+            // Replace with your EmailJS user ID
+            emailjs.init("your_emailjs_user_id");
+        })();
+    </script>
+
     <script src="js/main.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
+        // Preloader
+        window.addEventListener('load', function() {
+            const preloader = document.querySelector('.preloader');
+            if (preloader) {
+                setTimeout(() => {
+                    preloader.classList.add('hidden');
+                    setTimeout(() => {
+                        preloader.style.display = 'none';
+                    }, 500);
+                }, 1000);
+            }
+        });
+
+        // Initialize AOS
         AOS.init({
             duration: 800,
             easing: 'ease-in-out',

@@ -1,5 +1,39 @@
 /* Advanced Animation CSS File - Game Style */
 
+/* Preloader */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.preloader.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(0, 163, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #00A3FF;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
 /* Smooth global transitions */
 * {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -335,4 +369,97 @@ html {
 
 body {
     animation: pageLoad 0.8s ease-out;
+}
+
+/* Enhanced animations for GitHub stats */
+.github-stats {
+    animation: fadeIn 1s ease-out forwards;
+    animation-delay: 0.3s;
+    opacity: 0;
+}
+
+.github-stat {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.github-stat:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.github-stat i {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.github-stat:hover i {
+    transform: rotate(360deg);
+}
+
+/* Enhanced certification card animations */
+.certification-card {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.certification-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 163, 255, 0.1), transparent);
+    transition: all 0.6s ease;
+}
+
+.certification-card:hover::before {
+    left: 100%;
+}
+
+.certification-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 50px rgba(0, 163, 255, 0.2);
+}
+
+/* Enhanced contact form animations */
+.contact-glass-card {
+    transform: scale(1);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact-glass-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 40px rgba(0, 163, 255, 0.3);
+}
+
+/* AOS animations enhancement */
+[data-aos] {
+    pointer-events: none;
+}
+
+[data-aos].aos-animate {
+    pointer-events: auto;
+}
+
+/* Animated background gradients */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(120deg, rgba(0, 163, 255, 0.05) 0%, rgba(0, 0, 0, 0) 50%, rgba(100, 255, 218, 0.05) 100%);
+    background-size: 200% 200%;
+    animation: gradientMove 15s ease infinite;
+    z-index: 0;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }

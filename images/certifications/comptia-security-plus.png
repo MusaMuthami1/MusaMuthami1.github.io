@@ -1,0 +1,5 @@
+<!-- SVG placeholder for CompTIA Security+ logo -->
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="100" viewBox="0 0 200 100">
+  <rect width="200" height="100" fill="#D72D2D" />
+  <text x="50%" y="50%" font-family="Arial" font-size="14" font-weight="bold" fill="white" text-anchor="middle" alignment-baseline="middle">CompTIA Security+</text>
+</svg>
