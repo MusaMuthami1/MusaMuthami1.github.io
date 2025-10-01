@@ -2,11 +2,11 @@
 .contact-glass-bg {
     width: 100vw;
     min-height: 100vh;
-    background: linear-gradient(135deg, #0f172a 60%, #2563eb 100%);
+    background: linear-gradient(120deg, #181c2f 0%, #2b357a 60%, var(--primary-blue, #00A3FF) 100%);
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    padding: 80px 0 80px 0;
+    padding: 96px 0 96px 0;
     position: relative;
     overflow: hidden;
 }
@@ -17,71 +17,96 @@
     left: 60%;
     width: 420px;
     height: 420px;
-    background: radial-gradient(circle at 50% 50%, #60a5fa55 0%, transparent 80%);
-    filter: blur(60px);
+    background: radial-gradient(circle at 50% 50%, var(--primary-blue, #00A3FF) 0%, #2563eb33 70%, transparent 100%);
+    filter: blur(80px);
     z-index: 0;
 }
 .contact-glass-card {
     position: relative;
     z-index: 1;
-    background: rgba(17, 24, 39, 0.82);
-    border-radius: 22px;
-    box-shadow: 0 8px 48px 0 rgba(37,99,235,0.18), 0 1.5px 8px 0 rgba(0,0,0,0.18);
-        -webkit-backdrop-filter: blur(18px) saturate(1.2);
-        backdrop-filter: blur(18px) saturate(1.2);
-    border: 1.5px solid #2563eb55;
-    max-width: 420px;
+    background: rgba(24, 28, 47, 0.92);
+    border-radius: 28px;
+    box-shadow: 0 12px 64px 0 var(--primary-blue, #00A3FF33), 0 2px 12px 0 rgba(0,0,0,0.22);
+    -webkit-backdrop-filter: blur(22px) saturate(1.3);
+    backdrop-filter: blur(22px) saturate(1.3);
+    border: 1.5px solid var(--primary-blue, #00A3FF55);
+    max-width: 480px;
     width: 100%;
-    padding: 2.7rem 2.1rem 2.1rem 2.1rem;
-    color: #fff;
-    animation: fadeInUp 0.7s cubic-bezier(.4,0,.2,1);
+    padding: 3.5rem 2.7rem 2.7rem 2.7rem;
+    color: #f8fafc;
+    animation: fadeInUp 0.9s cubic-bezier(.4,0,.2,1);
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(48px) scale(0.98);
+        filter: blur(8px);
+    }
+    60% {
+        opacity: 1;
+        transform: translateY(-8px) scale(1.01);
+        filter: blur(0px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0px);
+    }
 }
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+/* Layout: header left-aligned, icons centered below */
 .contact-glass-header h2 {
     font-size: 2.2rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
-    color: #fff;
+    color: #e0e7ff;
     letter-spacing: -0.5px;
+    text-shadow: 0 2px 16px var(--primary-blue, #00A3FF33);
 }
 .contact-glass-header p {
-    color: #cbd5e1;
+    color: #b6c6f5;
     font-size: 1.08rem;
-    margin-bottom: 2.2rem;
+    margin-bottom: 2.5rem;
 }
 .contact-glass-form {
     display: flex;
     flex-direction: column;
-    gap: 1.3rem;
+    gap: 1.7rem;
 }
 .contact-glass-form .input-group {
     position: relative;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1.5rem;
 }
 .contact-glass-form input,
 .contact-glass-form textarea {
+    transition: border 0.22s cubic-bezier(.4,0,.2,1), box-shadow 0.22s cubic-bezier(.4,0,.2,1), background 0.22s cubic-bezier(.4,0,.2,1), transform 0.22s cubic-bezier(.4,0,.2,1);
     width: 100%;
     padding: 1.1rem 1rem 0.6rem 1rem;
-    background: rgba(30,41,59,0.92);
-    border: 1.5px solid #334155;
+    background: rgba(34, 40, 70, 0.97);
+    border: 1.5px solid var(--primary-blue, #00A3FF44);
     border-radius: 10px;
-    color: #fff;
+    color: #e0e7ff;
     font-size: 1rem;
     transition: border 0.2s, box-shadow 0.2s, background 0.2s;
     outline: none;
     resize: none;
-    box-shadow: 0 1.5px 8px 0 rgba(37,99,235,0.04);
+    box-shadow: 0 1.5px 8px 0 var(--primary-blue, #00A3FF11);
 }
 .contact-glass-form input:focus,
 .contact-glass-form textarea:focus {
     background: #232946;
-    border: 1.5px solid #60a5fa;
-    box-shadow: 0 0 0 3px #60a5fa33;
+    border: 1.5px solid var(--primary-blue, #00A3FF);
+    box-shadow: 0 0 0 3px var(--primary-blue, #00A3FF33);
+    transform: scale(1.025);
 }
 .contact-glass-form label {
     position: absolute;
     left: 1rem;
     top: 1.1rem;
-    color: #94a3b8;
+    color: #a5b4fc;
     font-size: 1rem;
     pointer-events: none;
     background: transparent;
@@ -94,8 +119,8 @@
     top: -0.7rem;
     left: 0.8rem;
     font-size: 0.85rem;
-    color: #60a5fa;
-    background: #111827;
+    color: var(--primary-blue, #00A3FF);
+    background: #232946;
     padding: 0 0.3rem;
     border-radius: 4px;
 }
@@ -104,38 +129,43 @@
     max-height: 220px;
 }
 .contact-glass-btn {
-    margin-top: 1.2rem;
-    background: linear-gradient(90deg, #6366f1 0%, #2563eb 100%);
+    margin-top: 1.7rem;
+    background: rgba(0, 163, 255, 0.18);
     color: #fff;
-    font-size: 1.13rem;
-    font-weight: 600;
-    border: none;
-    border-radius: 10px;
-    padding: 0.95rem 2.2rem;
+    font-size: 0.78rem;
+    font-weight: 400;
+    border: 1px solid rgba(0, 163, 255, 0.3);
+    border-radius: 3px;
+    padding: 0.15rem 0.45rem;
     cursor: pointer;
-    box-shadow: 0 4px 24px rgba(99,102,241,0.18), 0 1.5px 8px 0 rgba(0,0,0,0.10);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px var(--primary-blue, #00A3FF22);
     display: flex;
     align-items: center;
     gap: 0.7rem;
     justify-content: center;
-    transition: background 0.18s, box-shadow 0.18s, transform 0.18s;
+    transition: background 0.18s, box-shadow 0.18s, transform 0.18s, filter 0.18s;
     letter-spacing: 0.01em;
 }
 .contact-glass-btn:hover {
-    background: linear-gradient(90deg, #2563eb 0%, #6366f1 100%);
-    box-shadow: 0 8px 32px rgba(99,102,241,0.22);
-    transform: scale(1.04);
+    background: rgba(0, 163, 255, 0.25);
+    border: 1px solid rgba(0, 163, 255, 0.5);
+    box-shadow: 0 1px 3px var(--primary-blue, #00A3FF33);
+    transform: translateY(-1px);
+    filter: brightness(1.05);
 }
 .contact-glass-btn:active {
-    transform: scale(0.97);
+    transform: translateY(0);
+    background: rgba(0, 163, 255, 0.15);
+    filter: brightness(0.95);
 }
+
 .contact-glass-icons {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 1.2rem;
-    margin-top: 2.2rem;
+    gap: 1.5rem;
+    margin-top: 3.2rem;
 }
 .contact-glass-icon {
     display: flex;
@@ -144,27 +174,35 @@
     width: 48px;
     height: 48px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #2563eb 60%, #60a5fa 100%);
-    box-shadow: 0 2px 8px rgba(37,99,235,0.13);
-    transition: background 0.18s, box-shadow 0.18s, transform 0.18s;
+    background: linear-gradient(135deg, var(--primary-blue, #00A3FF) 60%, #2563eb 100%);
+    box-shadow: 0 2px 8px var(--primary-blue, #00A3FF22);
+    transition: background 0.18s, box-shadow 0.18s, transform 0.18s, filter 0.18s;
 }
 .contact-glass-icon:hover {
-    background: linear-gradient(135deg, #60a5fa 0%, #2563eb 100%);
-    box-shadow: 0 4px 16px rgba(37,99,235,0.18);
-    transform: scale(1.12);
+    background: linear-gradient(135deg, #2563eb 0%, var(--primary-blue, #00A3FF) 100%);
+    box-shadow: 0 4px 16px var(--primary-blue, #00A3FF33);
+    transform: scale(1.15) rotate(-4deg);
+    filter: brightness(1.15) drop-shadow(0 0 8px var(--primary-blue, #00A3FF55));
 }
 .contact-glass-icon img {
     width: 26px;
     height: 26px;
+    transition: transform 0.22s cubic-bezier(.4,0,.2,1), filter 0.22s cubic-bezier(.4,0,.2,1);
+}
+.contact-glass-icon:hover img {
+    transform: scale(1.13) rotate(4deg);
+    filter: drop-shadow(0 0 6px var(--primary-blue, #00A3FF77));
 }
 @media (max-width: 900px) {
     .contact-glass-bg {
         padding: 32px 0 32px 0;
         min-height: unset;
+        align-items: flex-start;
     }
     .contact-glass-card {
-        padding: 1.2rem 0.5rem 1.2rem 0.5rem;
+        padding: 1.5rem 0.7rem 1.5rem 0.7rem;
         max-width: 98vw;
+        border-radius: 18px;
     }
     .contact-glass-icons {
         gap: 0.7rem;
@@ -348,11 +386,11 @@
 .contact-card-form textarea:not(:placeholder-shown) + label {
     top: -0.7rem;
     left: 0.8rem;
-    font-size: 0.85rem;
-    color: #60a5fa;
-    background: #111827;
-    padding: 0 0.3rem;
+    font-size: 0.82rem;
+    padding: 0.18rem 0.55rem;
+    gap: 0.18rem;
     border-radius: 4px;
+    font-weight: 400;
 }
 .contact-card-form textarea {
     min-height: 110px;
@@ -858,10 +896,10 @@ h2::after {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    font-size: 0.9rem;
-    position: relative;
-}
-
+    font-size: 0.89rem;
+    padding: 0.38rem 0.85rem;
+    gap: 0.28rem;
+    border-radius: 7px;
 .nav-links a:hover::after {
     content: '';
     position: absolute;
@@ -1096,9 +1134,11 @@ h2::after {
     margin-bottom: 20px;
     line-height: 1.8;
     color: rgba(255, 255, 255, 0.9);
-    font-size: 1.1rem;
-    font-weight: 400;
-}
+    font-size: 0.98rem;
+    padding: 0.65rem 1.3rem;
+    gap: 0.45rem;
+    width: 14px !important;
+    height: 14px !important;
 
 .text-background p:last-child {
     margin-bottom: 0;
