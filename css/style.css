@@ -35,6 +35,12 @@
     padding: 3.5rem 2.7rem 2.7rem 2.7rem;
     color: #f8fafc;
     animation: fadeInUp 0.9s cubic-bezier(.4,0,.2,1);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
 @keyframes fadeInUp {
     0% {
         opacity: 0;
@@ -51,11 +57,6 @@
         transform: translateY(0) scale(1);
         filter: blur(0px);
     }
-}
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
 }
 /* Layout: header left-aligned, icons centered below */
 .contact-glass-header h2 {
@@ -129,16 +130,16 @@
     max-height: 220px;
 }
 .contact-glass-btn {
-    margin-top: 1.7rem;
-    background: rgba(0, 163, 255, 0.18);
-    color: #fff;
-    font-size: 0.78rem;
-    font-weight: 400;
-    border: 1px solid rgba(0, 163, 255, 0.3);
-    border-radius: 3px;
-    padding: 0.15rem 0.45rem;
-    cursor: pointer;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px var(--primary-blue, #00A3FF22);
+    margin-top: 1.7rem !important;
+    background: #4a76f8 !important;
+    color: #fff !important;
+    font-size: 0.95rem !important;
+    font-weight: 500 !important;
+    border: none !important;
+    border-radius: 30px !important;
+    padding: 0.6rem 2rem !important;
+    cursor: pointer !important;
+    box-shadow: 0 2px 10px rgba(74, 118, 248, 0.4) !important;
     display: flex;
     align-items: center;
     gap: 0.7rem;
@@ -147,16 +148,15 @@
     letter-spacing: 0.01em;
 }
 .contact-glass-btn:hover {
-    background: rgba(0, 163, 255, 0.25);
-    border: 1px solid rgba(0, 163, 255, 0.5);
-    box-shadow: 0 1px 3px var(--primary-blue, #00A3FF33);
-    transform: translateY(-1px);
-    filter: brightness(1.05);
+    background: #3c67e3 !important;
+    box-shadow: 0 4px 15px rgba(74, 118, 248, 0.5) !important;
+    transform: translateY(-2px) !important;
+    filter: brightness(1.05) !important;
 }
 .contact-glass-btn:active {
-    transform: translateY(0);
-    background: rgba(0, 163, 255, 0.15);
-    filter: brightness(0.95);
+    transform: translateY(0) !important;
+    background: #2c51bf !important;
+    box-shadow: 0 2px 5px rgba(74, 118, 248, 0.3) !important;
 }
 
 .contact-glass-icons {
