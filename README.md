@@ -39,6 +39,6 @@ Welcome to my professional portfolio website showcasing my expertise as a Cybers
 
 ## 📞 Contact Information
 
-- 📧 Email: musamwange2@gmail.com
+- 📧 Email: <musamwange2@gmail.com>
 - 📱 Phone: +254 114 945 842
-- 💬 WhatsApp: https://wa.me/254114945842
+- 💬 WhatsApp: [https://wa.me/254114945842](https://wa.me/254114945842)

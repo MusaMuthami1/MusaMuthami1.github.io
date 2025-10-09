@@ -275,18 +275,50 @@
 }
 @media (max-width: 900px) {
     .contact-glass-bg {
-        padding: 32px 0 32px 0;
+        padding: 32px 10px;
         min-height: unset;
         align-items: flex-start;
     }
     .contact-glass-card {
-        padding: 1.5rem 0.7rem 1.5rem 0.7rem;
-        max-width: 98vw;
+        padding: 2rem 1.5rem;
+        max-width: 95vw;
         border-radius: 18px;
+        margin: 0 auto;
     }
     .contact-glass-icons {
-        gap: 0.7rem;
-        margin-top: 1.2rem;
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-glass-bg {
+        padding: 20px 5px;
+    }
+    
+    .contact-glass-card {
+        padding: 1.5rem 1rem;
+        max-width: 98vw;
+        border-radius: 15px;
+    }
+    
+    .contact-glass-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .contact-glass-form .input-group {
+        margin-bottom: 1.2rem;
+    }
+    
+    .contact-glass-form input,
+    .contact-glass-form textarea {
+        padding: 1rem 0.8rem 0.5rem 0.8rem;
+        font-size: 0.9rem;
+    }
+    
+    .contact-glass-btn {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.9rem;
     }
 }
 /* --- Contact Info Bar (UI/UX) --- */
@@ -887,6 +919,16 @@ body {
     color: var(--black);
     font-size: 14px;
     line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Prevent horizontal scroll on mobile */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
 }
 
 /* Ensure all elements use Poppins font */
@@ -948,13 +990,51 @@ h2::after {
     max-width: 1200px;
     z-index: 1000;
     -webkit-backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+    .glass-nav {
+        width: calc(100% - 20px);
+        padding: 12px 20px;
+        top: 10px;
+        border-radius: 25px;
+    }
+    
+    .logo-pill {
+        padding: 6px 15px;
+        font-size: 0.85rem;
+    }
+    
+    .nav-links {
+        display: none;
+    }
+    
+    .nav-button {
+        padding: 6px 15px;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .glass-nav {
+        width: calc(100% - 10px);
+        padding: 10px 15px;
+        top: 5px;
+        border-radius: 20px;
+    }
+    
+    .logo-pill {
+        padding: 5px 12px;
+        font-size: 0.8rem;
+    }
+    
+    .nav-button {
+        padding: 5px 12px;
+        font-size: 0.75rem;
+    }
 }
 
 .logo-pill {
@@ -992,17 +1072,24 @@ h2::after {
 }
 
 .nav-button {
-    background: var(--primary-blue);
-    color: white !important;
+    background: transparent;
+    color: var(--black) !important;
     padding: 8px 20px;
     border-radius: 50px;
-    border: 1px solid var(--black);
+    border: 2px solid var(--black);
     transition: all 0.3s ease;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.89rem;
 }
 
 .nav-button:hover {
+    background: var(--black);
+    color: var(--white) !important;
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(0, 163, 255, 0.4);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .nav-button-secondary {
@@ -1035,6 +1122,74 @@ h2::after {
     padding: 80px 5% 0;
     max-width: 1400px;
     margin: 0 auto;
+}
+
+/* Mobile Hero Section */
+@media (max-width: 768px) {
+    .hero {
+        height: 100vh;
+        padding: 100px 10px 20px;
+        min-height: 600px;
+    }
+    
+    .hero-content {
+        padding: 0 10px;
+        max-width: 100%;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.2rem;
+        line-height: 1.1;
+        margin-bottom: 15px;
+    }
+    
+    .subtitle {
+        font-size: 0.9rem;
+        margin: 15px auto 25px;
+        max-width: 90%;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+    
+    .btn-primary,
+    .btn-secondary {
+        width: 200px;
+        text-align: center;
+        padding: 12px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 80px 5px 20px;
+        min-height: 550px;
+    }
+    
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+    
+    .subtitle {
+        font-size: 0.85rem;
+        max-width: 95%;
+    }
+    
+    .tags {
+        font-size: 0.7rem;
+        gap: 6px;
+        margin-bottom: 15px;
+    }
+    
+    .btn-primary,
+    .btn-secondary {
+        width: 180px;
+        padding: 10px 18px;
+        font-size: 0.85rem;
+    }
 }
 
 

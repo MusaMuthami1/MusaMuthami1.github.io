@@ -394,16 +394,20 @@ function initContactForm() {
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
         
-        // Validate all inputs
+        // Validate all inputs (but only required ones will cause form to fail)
         let isValid = true;
+        let hasRequiredFieldErrors = false;
+        
         inputs.forEach(input => {
-            if (!validateInput(input)) {
+            const inputValid = validateInput(input);
+            if (!inputValid && input.hasAttribute('required')) {
                 isValid = false;
+                hasRequiredFieldErrors = true;
             }
         });
         
         if (!isValid) {
-            showFormStatus('Please fill in all fields correctly.', 'error');
+            showFormStatus('Please fill in all required fields correctly.', 'error');
             return;
         }
         
@@ -466,22 +470,35 @@ function initContactForm() {
     function validateInput(input) {
         const value = input.value.trim();
         const type = input.type;
+        const name = input.name;
+        const isRequired = input.hasAttribute('required');
         let isValid = true;
         
         // Remove previous error states
         input.parentElement.classList.remove('error');
         input.style.borderColor = '';
         
+        // Skip validation for honeypot field
+        if (name === 'honeypot') {
+            return true;
+        }
+        
         // Validation rules
-        if (!value) {
+        if (isRequired && !value) {
             isValid = false;
         } else if (type === 'email' && value) {
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailRegex.test(value)) {
                 isValid = false;
             }
-        } else if (input.name === 'message' && value.length < 10) {
+        } else if (name === 'message' && value && value.length < 10) {
             isValid = false;
+        } else if (name === 'phone' && value) {
+            // Optional phone validation - if provided, should be valid
+            const phoneRegex = /^[\+]?[0-9\s\-\(\)]{10,}$/;
+            if (!phoneRegex.test(value)) {
+                isValid = false;
+            }
         }
         
         // Apply visual feedback
