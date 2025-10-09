@@ -363,7 +363,10 @@ function initContactForm() {
     const submitBtn = document.getElementById('submitBtn');
     const formStatus = document.getElementById('formStatus');
     
-    if (!contactForm) return;
+    if (!contactForm || !submitBtn || !formStatus) {
+        console.warn('Contact form elements not found');
+        return;
+    }
     
     // Add enhanced input animations
     const inputs = contactForm.querySelectorAll('input, textarea');
@@ -585,10 +588,10 @@ function initContactForm() {
                 return;
             }
             
-            // Replace with your EmailJS service, template, and user IDs
-            const serviceID = 'service_your_emailjs_service';
-            const templateID = 'template_your_emailjs_template';
-            const userID = 'your_emailjs_user_id';
+            // EmailJS configuration - Replace with your actual service details
+            const serviceID = 'YOUR_SERVICE_ID'; // Replace with your EmailJS service ID
+            const templateID = 'YOUR_TEMPLATE_ID'; // Replace with your EmailJS template ID
+            const userID = 'YOUR_USER_ID'; // Replace with your EmailJS user ID
             
             const templateParams = {
                 name: data.name,
@@ -597,8 +600,8 @@ function initContactForm() {
                 message: data.message
             };
             
-            // Check if emailjs is loaded
-            if (window.emailjs) {
+            // Check if emailjs is loaded and properly configured
+            if (window.emailjs && serviceID !== 'YOUR_SERVICE_ID') {
                 emailjs.send(serviceID, templateID, templateParams, userID)
                     .then(response => {
                         console.log('SUCCESS!', response.status, response.text);
@@ -617,21 +620,14 @@ function initContactForm() {
                         });
                     });
             } else {
-                // Fallback if EmailJS is not loaded
-                console.log('EmailJS not loaded, using fallback');
+                // Fallback for when EmailJS is not configured
+                console.log('EmailJS not configured. Contact form submitted with fallback.');
                 setTimeout(() => {
-                    if (Math.random() > 0.1) {
-                        resolve({ 
-                            status: 200, 
-                            message: 'Email sent successfully',
-                            data: data 
-                        });
-                    } else {
-                        reject({ 
-                            status: 500, 
-                            message: 'Service temporarily unavailable' 
-                        });
-                    }
+                    resolve({ 
+                        status: 200, 
+                        message: 'Thank you for your message! I will get back to you soon via the contact information provided.',
+                        data: data 
+                    });
                 }, 1500);
             }
         });

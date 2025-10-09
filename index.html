@@ -2,14 +2,16 @@
 <html lang="en">
 <head>
     <!-- Updated: October 9, 2025 - Enhanced with animations and mobile fixes -->
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <!-- Google Analytics - Replace with your actual tracking ID when ready -->
+    <!-- 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YOUR-TRACKING-ID"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-XXXXXXXXXX'); // Replace with your actual Google Analytics tracking ID
+      gtag('config', 'G-YOUR-TRACKING-ID');
     </script>
+    -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Musa Mwange | Cybersecurity Portfolio</title>
@@ -164,7 +166,7 @@
             <div class="about-content" data-aos="fade-up" data-aos-duration="800">
                 <div class="about-profile-section">
                     <div class="about-profile-image" data-aos="zoom-in" data-aos-delay="300">
-                        <img src="images/profile.JPG" alt="Musa Mwange" loading="lazy">
+                        <img src="images/profile.JPG" alt="Musa Mwange" loading="lazy" onerror="this.style.display='none'">
                     </div>
                 </div>
                 <div class="about-text-content" data-aos="fade-left" data-aos-delay="400">
@@ -342,7 +344,7 @@
                                 <span class="status-badge">Featured Project</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://musamuthami1.github.io/secure-vault-demo/" class="project-link" target="_blank" rel="noopener" title="View SecureVault Demo">Live Demo</a>
+                                <a href="https://github.com/MusaMuthami1/secure-vault" class="project-link" target="_blank" rel="noopener" title="View SecureVault Repository">View Project</a>
                                 <a href="https://github.com/MusaMuthami1/secure-vault" class="project-link" target="_blank" rel="noopener" title="View SecureVault Source Code">GitHub <i class="fab fa-github"></i></a>
                             </div>
                         </div>
@@ -389,7 +391,7 @@
                                 <span class="tech">HTML5</span>
                                 <span class="tech">CSS3</span>
                                 <span class="tech">JavaScript</span>
-                                <span class="tech">GSAP Animations</span>
+                                <span class="tech">AOS Animations</span>
                                 <span class="tech">Responsive Design</span>
                             </div>
                             <div class="github-stats">
@@ -570,13 +572,13 @@
                     </div>
     </section>
 
-    <!-- EmailJS for contact form -->
+    <!-- EmailJS for contact form - Replace with your actual EmailJS configuration -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script>
-        (function() {
-            // Replace with your EmailJS user ID
-            emailjs.init("your_emailjs_user_id");
-        })();
+        // EmailJS configuration - Replace with your actual service details
+        if (typeof emailjs !== 'undefined') {
+            // emailjs.init("YOUR_EMAILJS_USER_ID"); // Uncomment and replace when ready
+        }
     </script>
 
     <script src="js/main.js"></script>
