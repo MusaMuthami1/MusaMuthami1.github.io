@@ -31,6 +31,8 @@ Welcome to my professional portfolio website showcasing my expertise as a Cybers
 - ✅ Improved accessibility features
 - ✅ Added performance optimizations (lazy loading, etc.)
 - ✅ Fixed various UI/UX issues
+- ✅ Fixed contact form validation and mobile responsiveness
+- ✅ Added preloader and enhanced animations
 
 ## 📎 Project Links
 
