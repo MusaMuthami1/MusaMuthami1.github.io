@@ -11,8 +11,8 @@ export const socials = [
   },
   {
     name: "GitHub",
-    url: "https://github.com/MusaMuthami1",
-    handle: "/MusaMuthami1",
+    url: "https://github.com/MuthamiM",
+    handle: "/MuthamiM",
   },
   {
     name: "LeetCode",
@@ -65,36 +65,46 @@ export const skills = [
 
 export const projects = [
   {
-    name: "SecureVault",
-    tech: "MERN Stack • MongoDB",
-    desc: "Secure password management system",
-    link: "#",
-    liveLink: "#",
+    name: "KOMIUT",
+    tech: "Flutter • Dart • M-Pesa API",
+    desc: "Transport booking app with M-Pesa & card payments",
+    link: "https://github.com/MuthamiM/KOMIUT",
+    liveLink: "https://github.com/MuthamiM/KOMIUT/releases",
+  },
+  {
+    name: "VOO Citizen App",
+    tech: "Flutter • Dart • Supabase",
+    desc: "Citizen engagement app with email OTP verification",
+    link: "https://github.com/MuthamiM/voo-citizen-app",
+    liveLink: "https://github.com/MuthamiM/voo-citizen-app/releases",
   },
   {
     name: "Portfolio Website",
     tech: "Next.js • TypeScript • Tailwind",
     desc: "Interactive cybersecurity portfolio",
-    link: "https://github.com/MusaMuthami1/MusaMuthami1.github.io",
+    link: "https://github.com/MuthamiM",
     liveLink: "https://musamuthami1.github.io",
-  },
-  {
-    name: "Coming Soon",
-    tech: "To be added",
-    desc: "More projects in development",
-    link: "#",
-    liveLink: "#",
   },
 ];
 
 export const repos = [
   {
-    name: "Open Source Contributions",
+    name: "KOMIUT",
     prs: [
       {
-        title: "To be added soon - Currently building projects",
-        url: "#",
+        title: "Transport booking with M-Pesa integration",
+        url: "https://github.com/MuthamiM/KOMIUT",
+      },
+    ],
+  },
+  {
+    name: "VOO Citizen App",
+    prs: [
+      {
+        title: "Citizen engagement with email OTP",
+        url: "https://github.com/MuthamiM/voo-citizen-app",
       },
     ],
   },
 ];
+
