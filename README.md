@@ -2,7 +2,7 @@
 
 Hi, I'm Musa Muthami, a passionate Web Developer. I create beautiful, responsive applications with clean code and elegant user experiences.
 
-🌐 **Visit my portfolio:** [https://musamuthami.dev/](https://musamuthami.dev/)
+ **Visit my portfolio:** [https://musamuthami.dev/](https://musamuthami.dev/)
 
 ## About This Portfolio
 
@@ -19,10 +19,10 @@ Built with TypeScript, Tailwind CSS, and next-themes for an elegant dark/light m
 
 ## Features
 
-✨ Responsive design
-🎨 Dark/Light theme switching
-⚡ Fast and optimized performance
-🎯 Clean and modern UI
+Responsive design
+Dark/Light theme switching
+Fast and optimized performance
+Clean and modern UI
 
 ---
 
