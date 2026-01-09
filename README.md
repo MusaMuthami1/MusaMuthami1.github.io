@@ -26,4 +26,4 @@ Clean and modern UI
 
 ---
 
-© 2025 Musa Muthami. All rights reserved.
+© 2026 Musa Muthami. All rights reserved.
