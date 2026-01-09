@@ -42,24 +42,25 @@ export const socials = [
 ];
 
 export const skills = [
-  "MERN Stack",
-  "MongoDB",
+  "Flutter",
+  "Dart",
+  "Swift",
+  "Next.js",
   "React",
-  "Node.js",
-  "Express",
-  "NextJS",
   "TypeScript",
   "JavaScript",
-  "Tailwind",
+  "Node.js",
+  "Express",
+  "MongoDB",
   "MySQL",
-  "Prisma",
-  "Postman",
+  "Supabase",
+  "Firebase",
+  "USSD Development",
+  "M-Pesa Integration",
+  "Tailwind",
   "Git",
   "GitHub",
   "Python",
-  "Cybersecurity",
-  "Penetration Testing",
-  "Network Security",
   "CI/CD",
 ];
 
@@ -79,11 +80,18 @@ export const projects = [
     liveLink: "https://github.com/MuthamiM/voo-citizen-app/releases",
   },
   {
+    name: "USSD Dashboard",
+    tech: "Next.js • TypeScript • Node.js",
+    desc: "Dashboard for managing USSD services and analytics",
+    link: "https://github.com/MuthamiM",
+    liveLink: "#",
+  },
+  {
     name: "Portfolio Website",
     tech: "Next.js • TypeScript • Tailwind",
-    desc: "Interactive cybersecurity portfolio",
-    link: "https://github.com/MuthamiM",
-    liveLink: "https://musamuthami1.github.io",
+    desc: "Personal portfolio showcasing my work and skills",
+    link: "https://github.com/MusaMuthami1/MusaMuthami1.github.io",
+    liveLink: "https://musamuthami.dev",
   },
 ];
 
@@ -103,6 +111,24 @@ export const repos = [
       {
         title: "Citizen engagement with email OTP",
         url: "https://github.com/MuthamiM/voo-citizen-app",
+      },
+    ],
+  },
+  {
+    name: "USSD Dashboard",
+    prs: [
+      {
+        title: "USSD services management dashboard",
+        url: "https://github.com/MuthamiM",
+      },
+    ],
+  },
+  {
+    name: "Portfolio Website",
+    prs: [
+      {
+        title: "Personal portfolio with Next.js",
+        url: "https://github.com/MusaMuthami1/MusaMuthami1.github.io",
       },
     ],
   },

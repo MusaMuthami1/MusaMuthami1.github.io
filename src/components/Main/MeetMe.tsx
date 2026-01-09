@@ -16,14 +16,15 @@ const MeetMe = () => {
               ABOUT ME
             </h2>
             <p className="text-sm lg:text-base xl:text-md leading-relaxed max-w-3xl mx-auto ">
-              Hi! I&apos;m <span className="[font-weight:700]">Musa Mwange</span>,
-              a <span className="[font-weight:700]">Cybersecurity Specialist</span> and{" "}
-              <span className="[font-weight:700]">Frontend Developer</span> who bridges the gap between secure technology and exceptional user experiences. I specialize in{" "}
-              <span className="[font-weight:700]">penetration testing</span>,{" "}
-              <span className="[font-weight:700]">vulnerability assessment</span>,
-              and building secure web applications that prioritize both{" "}
-              <span className="[font-weight:700]">security</span> and{" "}
-              <span className="[font-weight:700]">usability</span>.
+              Hi! I&apos;m <span className="[font-weight:700]">Musa Muthami</span>,
+              a <span className="[font-weight:700]">Software Developer at SafeTek Solutions</span>.
+              I specialize in building{" "}
+              <span className="[font-weight:700]">mobile applications</span> with{" "}
+              <span className="[font-weight:700]">Flutter</span>,{" "}
+              <span className="[font-weight:700]">web applications</span> with{" "}
+              <span className="[font-weight:700]">Next.js</span>, and{" "}
+              <span className="[font-weight:700]">USSD solutions</span>.
+              I create innovative apps that deliver exceptional user experiences.
             </p>
           </div>
 
@@ -32,8 +33,8 @@ const MeetMe = () => {
               HIRE ME
             </h2>
             <p className="text-sm lg:text-base xl:text-md leading-relaxed max-w-3xl mx-auto">
-              I&apos;m available for cybersecurity consulting and web development opportunities. If
-              you need a security-focused developer to secure or build your product,
+              I&apos;m available for software development opportunities. If
+              you need a skilled developer to build your mobile app, web application, or USSD solution,
               feel free to connect.
               <Link
                 href="https://mail.google.com/mail/u/0/?fs=1&to=musamwange2@gmail.com&tf=cm"
