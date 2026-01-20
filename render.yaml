@@ -1,0 +1,9 @@
+services:
+  - name: MusaMuthami1-portfolio
+    type: static_site
+    env: static
+    repo: MusaMuthami1/MusaMuthami1.github.io
+    branch: main
+    buildCommand: "npm run build"
+    publishPath: out
+    plan: free
